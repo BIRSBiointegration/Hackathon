@@ -3,9 +3,9 @@ Welcome to our repository to prepare for our upcoming workshop *Mathematical Fra
 More details about the workshop are [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
 # Organisers
-- Aedin Culhane (Harvard TH Chan School of Public Health)
-- Elana Fertig (John Hopkins)
-- Kim-Anh Lê Cao (University of Melbourne)
+- [Aedin Culhane](https://www.hsph.harvard.edu/aedin-culhane/) (Harvard TH Chan School of Public Health)
+- [Elana Fertig](https://fertiglab.com/) (John Hopkins)
+- [Kim-Anh Lê Cao](https://lecao-lab.science.unimelb.edu.au/) (University of Melbourne)
 
 # Multi-omics studies
 Description of three multi-omics studies will be posted here, with easy access
