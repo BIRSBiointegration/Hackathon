@@ -12,7 +12,7 @@ Description of three multi-omics studies will be posted here, with easy access
 
 
 # Communication
-All communication should be via Slack. Join our channel: birsbiointegration.slack.com or contact aedin[@]jimmy.harvard.edu
+All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtNzc4Njk4OTMwNDAzLTk2MTU2ZGQyMWE5ZTc1MmU3NDU2ZmFiNzRmMzcwYjZkN2JkYjcyNTU5NGJhNzhiNWQ4NjI3NmNjYmQxZWZkNGU) or contact aedin[@]jimmy.harvard.edu
 
 # Timelines
 - Studies start to be released from the week of **14th October 2019**.
