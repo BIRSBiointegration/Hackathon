@@ -19,8 +19,8 @@ The study includes 826 cells matching  across all data sets (transcriptome, DNA 
 
 
 ## Download
-All processed and original data and scripts used to pre-process are avilable in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ
-The contained files are described [below](#Directory-Structure).
+All processed and original data and scripts used to pre-process are avilable in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ  
+The contained files are described [below](#Directory-Structure).  
 Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
 
 
@@ -41,6 +41,7 @@ a list of `data.table` class objects containing methylation data - filtered by a
 
 each dataset contains a data.table with 6 columns. Below is a snapshot:
 
+```r
 $ id_met   <chr> : sample id in the dataset matching that of metadata  
 $ id       <chr> : feature id  
 $ anno     <chr> : annotation (identical for a given annotation)  
@@ -53,7 +54,7 @@ $ rbar     <dbl> : weighted mean of methylation rate across all cells for featur
 $ n_i      <dbl> : weighted sum of observations across all cells for feature id  
 $ vhat     <dbl> : weighted variance of methylation rate at feature id for all cells  
 $ lci      <dbl> : lower bound of vhat 95% confidence interval  
-
+```
 
 #### ./output/scnmtseq_gastrulation_mae_826-cells_orderedFeatures.rds
 
@@ -94,6 +95,7 @@ a list of `data.table` class objects containing chromatin accessibility data - f
 
 each dataset contains a data.table with 6 columns. Below is a snapshot:
 
+```r
 $ id_acc   <chr> : sample id in the dataset matching that of metadata  
 $ id       <chr> : feature id  
 $ anno     <chr> : annotation (identical for a given annotation)  
@@ -106,7 +108,7 @@ $ rbar     <dbl> : weighted mean of accessibility rate across all cells for feat
 $ n_i      <dbl> : weighted sum of observations across all cells for feature id  
 $ vhat     <dbl> : weighted variance of accessibility rate at feature id for all cells  
 $ lci      <dbl> : lower bound of vhat 95% confidence interval  
-
+```
 
 ### ./output/sample-metadata_matching-cells.txt
 
@@ -122,33 +124,34 @@ original input data before pre-processing:
 
 tsv files for each annotation with columns containing:
 
+```r
 $ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id  
 $ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id  
 $ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation  
 $ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of calls methylated  
 $ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls  
 $ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of calls methylated  
-
-
+```
 #### ./data/acc/parsed
 
 tsv files for each annotation with columns:
 
+```r
 $ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id  
 $ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id  
 $ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation  
 $ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of detected accessible loci  
 $ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls  
 $ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci accessible  
-
+```
 
 ### ./notebook
 
-In ./notebook/preprocessing.Rmd, a preprocessing file which reproduces `./output` files from `./data` files
+In `./notebook/preprocessing.Rmd`, a preprocessing file which reproduces `./output` files from `./data` files.
 
-### `./src`
+### ./src
 
-Utility functions used for preprocessing
+Utility functions used for preprocessing.
 
 
 
