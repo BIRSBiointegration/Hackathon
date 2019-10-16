@@ -25,7 +25,7 @@ Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder,
 
 
 ## Easy data
-Easy data can be downloaded from here in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput  
+Easy data can be downloaded from [CloudStor](relocate gitignore to toplevel - ignore all dot files) in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput  
 The description of the files can be found in below.
 
 ## Data directories
