@@ -20,13 +20,13 @@ The study includes 826 cells matching  across all data sets (transcriptome, DNA 
 
 ## Download
 All processed and original data and scripts used to pre-process are avilable in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ  
-The contained files are described [below](#Directory-Structure).  
+The contained files are described below.  
 Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
 
 
 ## Easy data
-Easy data can be downloaded from here in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput
-The description of the files can be found in [below](#./output).
+Easy data can be downloaded from here in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput  
+The description of the files can be found in below.
 
 ## Data directories
 
