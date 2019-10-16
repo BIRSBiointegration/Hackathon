@@ -53,10 +53,11 @@ knitr::opts_chunk$set(
 
 
 # Background 
-Background and easy data link is provided in the Readme_data file.
+Background and easy data link is provided in `./scNMT-seq/README.md` file.
 
 # Data 
-## Load libraries
+
+## Load packages
 ```{r, results = 'hide'}
 # packages to load
 library(mixOmics)
@@ -70,12 +71,12 @@ cat("R_MAX_VSIZE=100Gb", file = ".Renviron")
 
 
 ## Load  the data
-The data are stored as a `MultiAssayExperiment` object (see cheatsheet provided in the shared folder `Guidelines`, and this [link](https://bioconductor.org/packages/devel/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html)) to handle and sample match multi-omics data more efficiently. 
+The data are stored as a `MultiAssayExperiment` object (see cheatsheet provided in the shared folder `Guidelines`, and this [link](https://bioconductor.org/packages/devel/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html)) to handle and sample match (harmonise) multi-omics data more efficiently. 
 
 All annotations used M. *musculus* GRCm38 mouse genome.
-
+xw
 ```{r}
-# MAE experiment:
+# download MAE object from CloudStor and load:
 download.file(url = "https://cloudstor.aarnet.edu.au/plus/s/kzvLWezvcL5HFXJ/download",
               destfile = 'rdsfile.rds')
 
@@ -97,31 +98,31 @@ knitr::kable(summary(as.factor(colData(gastru.mae[,,'rna'])$stage),
               caption = 'Gastrulation stage information per cell'),
              format = 'markdown') 
 knitr::kable(summary(as.factor(colData(gastru.mae[,,'rna'])$stage_lineage),
-              caption = 'Gastrulation stage x lineage information per cell'),
+              caption = 'Combined phenotype of lineage and stage for visualisation'),
              format = 'markdown')
 ```
 
 # Description of the different data sets
 
 ## Transriptome data
-The transcriptomics data were normalised using `scran`. Other methods can be used if you wish by retrieving the raw data from the `./data` folder from the easy access link). We advise gene filtering by the most variable genes (we provide the code in this .Rmd file).
+The transcriptomics data were normalised using `scran`. Other methods can be used if you wish by retrieving the original `SingleCellExperiment` object in `./data/rna/parsed/SingleCellExperiment.rds` and accessing the raw counts using `BiocGenerics::counts()` function. We advise gene filtering by the most variable genes (helper code included in the `Rmd` version of this document).
 
 ## Epigenome data
 The methylome (`met`) and the accessibility data (`acc`) can be summarised over overlapping genic regions (such as gene bodies and gene promoters) and CG islands, as well as other genomic regions of epigenetic interest. In particular, and in addition to the datasets for gene-body and promoter methylome, we have chosen the following 3 regions which were highlighted in the original publication as epigenetically heterogeneous during development:
 
-- P300: enhancer sites where p300 TFs bind
-- CTCF binding sites: The primary role of CTCF transcription factors is thought to be in regulating the 3D structure of chromatin.
-- DHS:  In these specific regions of the genome, chromatin has lost its condensed structure, exposing the DNA and making it accessible.
+- `P300`: enhancer sites where p300 TFs bind
+- `CTCF` binding sites: The primary role of CTCF transcription factors is thought to be in regulating the 3D structure of chromatin.
+- `DHS` ( DNase I hypersensitive sites): In these specific regions of the genome, chromatin has lost its condensed structure, exposing the DNA and making it accessible.
 
 Thus, we can investigate various subsets of DNA methylation (5 data sets) and DNA accessibility (5 data sets).
 
-The features in epigenetic data (`acc` and `met`) are ranked  according to their level of estimated biological variation in the assay matrices, after accounting for the uncertainty in observations due to the number of total CpGs observed in the region.
+The features in epigenetic data (`acc` and `met`) are ranked according to their level of estimated biological variation in the assay matrices, after accounting for the uncertainty in observations due to the number of total CpGs observed in the region.
 
 ### Pre-processing of epigenome data
 
-From the data provided by Argelaguet *et al.* (in `./data` folder), we re-calculated the `met` and `acc` rates with a beta(1,1) prior so that the Standard Errors (SE) of estimates can be used as weights as explained below. 
+From the data provided by Argelaguet *et al.* (in `./data` folder), we re-calculated the `met` and `acc` rates with a $\beta(1,1)$ prior so that the Standard Errors (SE) of estimates can be used as weights, as explained below. 
 
-We required a minimum of 3 calls in the region followed by a stringent cell detection filtering of ~ 60% (500 cells out of 826 matching ones) for acc data and ~50% (400/826 cells) for met data which on average had less coverage. These selected thresholds can be changed. 
+We required a minimum of 3 calls in the region followed by a stringent cell detection filtering of ~ 60% (500 cells out of 826 matching ones) for acc data and ~50% (400/826 cells) for met data which on average had less calls. These selected thresholds can be changed. 
 In the easy data we provide, features were sorted according to the lower bound of their estimated variance 95% confidence interval. We used the custom-made function `calc_site_stats` which can be found in the `.Rmd` version of this guide with its documentation and also in the `./src/utils/utils.R` file. This function also calculates a weight for each estimation based on the SE estimate (see function description) which can be used in various analyses.
 
 ```{r, eval = FALSE, echo=FALSE}
@@ -172,22 +173,19 @@ The processed `.rds` data files can be found in the `./output` folder.
 
 ### Caution about epigenome data
 
-- As highlighted above, the data provided are ordered based on increasing biological variation (the top features are of most interest)
+- As highlighted above, the data provided are ordered based on increasing biological variation (the top features are of most interest).
 
 - All epigenome data include a **large amount** of missing values (a proportion of 35-40\%!). You may choose to either estimate missing values, or choose / develop a method that can handle missing values.
 
 - You will need to compromise between estimate uncertainty and the amount of data missing: if you put more stringent requirements on minimum number of calls at a given locus, more data will be discarded, resulting in matrices with more `NA`s.
 
-- We do not recommend you run PCA on the epigenome data as it does not account for the uncertainties we measure on the methylation and accessibility rates. Try to account for it using the given SE in `.output/met_dt_list.rds` and `.output/met_dt_list.rds`, as detailed in the README file. To visualise population structure, an MDS using weighted Euclidean distances might be better suited.
+- We do not recommend you run PCA on the epigenome data as it does not account for the uncertainties we measure on the methylation and accessibility rates. Try to account for it using the given SE in `.output/met_dt_list.rds` and `.output/met_dt_list.rds`, as detailed in the `README` file. To visualise population structure, an MDS using weighted Euclidean distances might be better suited.
 
-- Methylome and chromatin accessibility data are far less predictive of cellular behaviour than transcriptome. Hence, these data may not be able to highlight phenotype heterogeneity, or identify outliers.
-
-- For markers, is the discrimination power / effect size correlated with site CpG coverage (proportion of CpGs covered)?
-
+- Methylome and chromatin accessibility data are generally far less predictive of cellular behaviour than transcriptome. Hence, these data may not be able to highlight phenotype heterogeneity, or identify outliers.
 
 **Possible Quick fixes for some issues highlighted above**:
- * Filter more stringently based on cell coverage so matrices  contain less `NA`s, but also less features (interpretation should be given with care).
-* Replace  missing values by the mean value across all cells (or use other imputation approach).
+ * Filter more stringently based on cell coverage so matrices contain less `NA`s, but also less features (interpretation should be given with care).
+* Replace missing values by the mean value across all cells (or use other imputation approach).
 
 
 
@@ -294,7 +292,7 @@ metadata.X <- colData(gastru.mae)
 # If you wish to help out
 
 * We use a fixed threshold for filtering, while every site has potentially different number of CpGs. How can we use an adaptive filtering?
-* How can we weight the data using the SE estimated (provided in `.output//met_dt_list.rds` and `.output/met_dt_list.rds`) so we can use the conventional component-based approaches directly?
+* How can we weight the data using the SE estimated (provided in `.output/met_dt_list.rds` and `.output/met_dt_list.rds`) so we can use the conventional component-based approaches directly?
 * The protocol assumes every C to T conversion is the result of deamination of an unmethylated C, which ignores the C to T mutations in the genome. This introduces errors in methylation estimations. What is the most effective way to account for this in the absence of a wildtype genome?
 * Any way to account for bias towards CpG rich regions in the methylation data?
 
