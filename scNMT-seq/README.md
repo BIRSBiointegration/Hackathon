@@ -1,7 +1,7 @@
 # Background 
-This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between information from these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies are still at their infancy for single cells. We will analyse a set of data from the novel technology scNMT- seq to study mouse gastrulation.
+This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between information from these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies are still at their infancy for single cells. We will analyse a set of data from the novel technology scNMT-seq to study mouse gastrulation.
 
-![Schematic description of scNMT-seq (from Ricard Argelaguet's gitHub page.)](scnmt-seq.png){#id .class width=50% height=50%}
+![Schematic description of scNMT-seq (from Ricard Argelaguet's gitHub page.)](scnmt-seq.png)
 
 
 ## Key article
@@ -9,56 +9,33 @@ This study focuses on emerging assays that combine transcriptome and epigenome p
 Argelaguet *et al.* 2019 is available at  https://www.biorxiv.org/content/10.1101/519207v1. (A more recent version of the paper is provided). 
 
 
-# Data description
+# Data
+
+## Overview
+
 The study includes 826 cells matching  across all data sets (transcriptome, DNA accessibility and DNA methylation) after quality control and filtering. 
 
-![Top: Schematic of the developing mouse embryo, with stages and lineages considered in this study labeled. Bottom: Dimensionality reduction of DNA chromatin accessibility and DNA methylation using Bayesian Factor analysis  (MOFA see the paper’s Methods section) or RNA expression data using UMAP (from Argelaguet *et al.* 2019)](figure1.png){#id .class width=50% height=50%}
+![Top: Schematic of the developing mouse embryo, with stages and lineages considered in this study labeled. Bottom: Dimensionality reduction of DNA chromatin accessibility and DNA methylation using Bayesian Factor analysis  (MOFA see the paper’s Methods section) or RNA expression data using UMAP (from Argelaguet *et al.* 2019)](figure1.png)
 
 
-# Easy data link 
-Easy data can be downloaded from here in the `output/` folder.
-
-https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ
-
-# Details about the data
-Detailed guidelines are available in scNMT-seq_guidelines in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
+## Download
+All processed and original data and scripts used to pre-process are avilable in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ
+The contained files are described [below](#Directory-Structure).
+Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
 
 
-## ./data
+## Easy data
+Easy data can be downloaded from here in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput
+The description of the files can be found in [below](#./output).
 
-input epigentic files before pre-processing:
+## Data directories
 
-### ./data/met/parsed
-
-tsv files for each annotation with columns containing:
-
-$ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id
-$ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id
-$ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation
-$ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of calls methylated
-$ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls
-$ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of calls methylated
-
-
-### ./data/acc/parsed
-
-tsv files for each annotation with columns:
-
-$ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id
-$ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id
-$ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation
-$ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of detected accessible loci
-$ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls
-$ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci accessible
-
-
-
-## ./output
+### ./output
 
 
 output epigentic files after preprocessing containing:
 
-### ./met_dt_list
+#### ./output/met_dt_list.rds
 
 a list of `data.table` class objects containing methylation data - filtered by a minimum of 3 calls per site and cell-detection of >= 400
 
@@ -78,7 +55,39 @@ $ vhat     <dbl> : weighted variance of methylation rate at feature id for all c
 $ lci      <dbl> : lower bound of vhat 95% confidence interval  
 
 
-### ./acc_dt_list
+#### ./output/scnmtseq_gastrulation_mae_826-cells_orderedFeatures.rds
+
+A `MultiAssayExperiment` object containing:
+
+```r
+A MultiAssayExperiment object of 13 listed
+ experiments with user-defined names and respective classes. 
+ Containing an ExperimentList class object of length 13: 
+ [1] rna: matrix with 18345 rows and 826 columns  ## normlaised expression
+ [2] met_genebody: matrix with 15837 rows and 826 columns  ## context DNA methylation rate
+ [3] met_promoter: matrix with 12092 rows and 826 columns  ## context DNA methylation rate
+ [4] met_cgi: matrix with 5536 rows and 826 columns  ## context DNA methylation rate
+ [5] met_p300: matrix with 101 rows and 826 columns  ## context DNA methylation rate
+ [6] met_CTCF: matrix with 175 rows and 826 columns  ## context DNA methylation rate
+ [7] met_DHS: matrix with 66 rows and 826 columns  ## context DNA methylation rate
+ [8] acc_genebody: matrix with 17139 rows and 826 columns  ## context DNA accessibility rate
+ [9] acc_promoter: matrix with 16518 rows and 826 columns  ## context DNA accessibility rate
+ [10] acc_cgi: matrix with 4459 rows and 826 columns  ## context DNA accessibility rate
+ [11] acc_p300: matrix with 138 rows and 826 columns  ## context DNA accessibility rate
+ [12] acc_CTCF: matrix with 898 rows and 826 columns  ## context DNA accessibility rate
+ [13] acc_DHS: matrix with 290 rows and 826 columns  ## context DNA accessibility rate
+
+
+Features: 
+ experiments() - obtain the ExperimentList instance 
+ colData() - the primary/phenotype DataFrame 
+ sampleMap() - the sample availability DataFrame 
+ `$`, `[`, `[[` - extract colData columns, subset, or experiment 
+ *Format() - convert into a long or wide DataFrame 
+ assays() - convert ExperimentList to a SimpleList of matrices
+```
+
+#### ./output/macc_dt_list.rds
 
 a list of `data.table` class objects containing chromatin accessibility data - filtered by a minimum of 3 calls per site and cell-detection of >= 500
 
@@ -99,17 +108,45 @@ $ vhat     <dbl> : weighted variance of accessibility rate at feature id for all
 $ lci      <dbl> : lower bound of vhat 95% confidence interval  
 
 
-
-### ./sample-metadata_matching-cells.txt
+### ./output/sample-metadata_matching-cells.txt
 
 sample metadata for matching cells across omics
 
 
-## ./notebook
+
+### ./data
+
+original input data before pre-processing:
+
+#### ./data/met/parsed
+
+tsv files for each annotation with columns containing:
+
+$ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id  
+$ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id  
+$ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation  
+$ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of calls methylated  
+$ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls  
+$ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of calls methylated  
+
+
+#### ./data/acc/parsed
+
+tsv files for each annotation with columns:
+
+$ V1 <chr> "E4.5-5.5_new_Plate1_A02", "E4.5-5.…   ## sample annotation id  
+$ V2 <chr> "ESC_p300_10004", "ESC_p300_10005",…   ## feature id  
+$ V3 <chr> "ESC_p300", "ESC_p300", "ESC_p300",…   ## annotation  
+$ V4 <int> 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,…   ## Number of detected accessible loci  
+$ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls  
+$ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci accessible  
+
+
+### ./notebook
 
 In ./notebook/preprocessing.Rmd, a preprocessing file which reproduces `./output` files from `./data` files
 
-## `./src`
+### `./src`
 
 Utility functions used for preprocessing
 
