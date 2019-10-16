@@ -147,6 +147,14 @@ $ V5 <int> 1, 4, 1, 2, 6, 5, 1, 2, 2, 1, 1, 3,…   ## Total calls
 $ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci accessible  
 ```
 
+#### ./data/rna/parsed
+
+Expression data in `SingleCellExperiment` class with counts and nroamlised logcounts.
+
+#### ./data/sample_metadata.txt
+
+Original sample metadata for all cells (including non-matching ones)
+
 ### ./notebook
 
 In `./notebook/preprocessing.Rmd`, a preprocessing file which reproduces `./output` files from `./data` files.
