@@ -30,31 +30,11 @@ The description of the files can be found in below.
 
 ## Data directories
 
+The [CloudStor folder](https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ) structure is as follows:
+
 ### ./output
 
-
-output epigentic files after preprocessing containing:
-
-#### ./output/met_dt_list.rds
-
-a list of `data.table` class objects containing methylation data - filtered by a minimum of 3 calls per site and cell-detection of >= 400
-
-each dataset contains a data.table with 6 columns. Below is a snapshot:
-
-```r
-$ id_met   <chr> : sample id in the dataset matching that of metadata  
-$ id       <chr> : feature id  
-$ anno     <chr> : annotation (identical for a given annotation)  
-$ Nmet     <int> : Number of calls supporting CpG methylation  
-$ N        <int> : Total number of calls in the region  
-$ rate     <dbl> : Rate of methylation calculated using a binomial model with beta(1, 1) prior  
-$ cell_cov <int> : Number of cells having at least 3 calls in the region for the feature id  
-$ wij      <dbl> : Weight of observation at feature id for cell j (id_met) calculated using SE(rate)  
-$ rbar     <dbl> : weighted mean of methylation rate across all cells for feature id  
-$ n_i      <dbl> : weighted sum of observations across all cells for feature id  
-$ vhat     <dbl> : weighted variance of methylation rate at feature id for all cells  
-$ lci      <dbl> : lower bound of vhat 95% confidence interval  
-```
+processed transcriptome and epigenome files containing:
 
 #### ./output/scnmtseq_gastrulation_mae_826-cells_orderedFeatures.rds
 
@@ -86,6 +66,28 @@ Features:
  `$`, `[`, `[[` - extract colData columns, subset, or experiment 
  *Format() - convert into a long or wide DataFrame 
  assays() - convert ExperimentList to a SimpleList of matrices
+```
+
+
+#### ./output/met_dt_list.rds
+
+a list of `data.table` class objects containing methylation data - filtered by a minimum of 3 calls per site and cell-detection of >= 400
+
+each dataset contains a data.table with 6 columns. Below is a snapshot:
+
+```r
+$ id_met   <chr> : sample id in the dataset matching that of metadata  
+$ id       <chr> : feature id  
+$ anno     <chr> : annotation (identical for a given annotation)  
+$ Nmet     <int> : Number of calls supporting CpG methylation  
+$ N        <int> : Total number of calls in the region  
+$ rate     <dbl> : Rate of methylation calculated using a binomial model with beta(1, 1) prior  
+$ cell_cov <int> : Number of cells having at least 3 calls in the region for the feature id  
+$ wij      <dbl> : Weight of observation at feature id for cell j (id_met) calculated using SE(rate)  
+$ rbar     <dbl> : weighted mean of methylation rate across all cells for feature id  
+$ n_i      <dbl> : weighted sum of observations across all cells for feature id  
+$ vhat     <dbl> : weighted variance of methylation rate at feature id for all cells  
+$ lci      <dbl> : lower bound of vhat 95% confidence interval  
 ```
 
 #### ./output/macc_dt_list.rds
