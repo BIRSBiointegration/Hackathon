@@ -1,12 +1,12 @@
 # Background 
-This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between information from these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies are still at their infancy for single cells. We will analyse a set of data from the scNMT-seq to study mouse gastrulation.
+This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies at single cell resolution are still at their infancy. We will analyse a set of data from a [scNMT-seq](https://www.nature.com/articles/s41467-018-03149-4) study to analyse mouse gastrulation.
 
 ![Schematic description of scNMT-seq (from Ricard Argelaguet's gitHub page.)](scnmt-seq.png)
 
 
 ## Key article
 
-Argelaguet *et al.* 2019 is available at  https://www.biorxiv.org/content/10.1101/519207v1. (this paper has been accepted for publication) 
+Argelaguet *et al.* 2019 is available at https://www.biorxiv.org/content/10.1101/519207v1 (this paper has been accepted for publication).
 
 
 # Data
@@ -25,8 +25,8 @@ Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder,
 
 
 ## Easy data
-Easy data can be downloaded from [CloudStor](https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ) in the `output/` folder or from the direct link: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput  
-The description of the files can be found in below.
+Easy data can be downloaded from [CloudStor](https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ) in the `output/` folder or from [this direct link](https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ?path=%2Foutput).  
+The contents are described below.
 
 ## Data directories
 
@@ -154,7 +154,7 @@ $ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci access
 
 #### ./data/rna/parsed
 
-Expression data in `SingleCellExperiment` class with counts and nroamlised logcounts.
+Expression data in `SingleCellExperiment` class with counts and [`scran`](https://bioconductor.org/packages/devel/bioc/html/scran.html)-normalised logcounts.
 
 #### ./data/sample_metadata.txt
 
@@ -162,7 +162,7 @@ Original sample metadata for all cells (including non-matching ones)
 
 ### ./notebook
 
-In `./notebook/preprocessing.Rmd`, a preprocessing file which reproduces `./output` files from `./data` files.
+In `./notebook/preprocessing.Rmd`, a preprocessing file which reproduces `./output` files from `./data` files. Make appropriate changes to input/output paths if you wish to re-preprocess `./data` files.
 
 ### ./src
 
