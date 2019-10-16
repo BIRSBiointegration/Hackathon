@@ -178,7 +178,7 @@ The processed `.rds` data files can be found in the `./output` folder.
 
 - You will need to compromise between estimate uncertainty and the amount of data missing: if you put more stringent requirements on minimum number of calls at a given locus, more data will be discarded, resulting in matrices with more `NA`s.
 
-- We do not recommend you run PCA on the epigenome data as it does not account for the uncertainties we measure on the methylation and accessibility rates. Try to account for it using the given SE in `.output//met_dt_list.rds` and `.output/met_dt_list.rds`, as detailed in the ReadMe file. To visualise population structure, an MDS using weighted Euclidean distances might be better suited.
+- We do not recommend you run PCA on the epigenome data as it does not account for the uncertainties we measure on the methylation and accessibility rates. Try to account for it using the given SE in `.output/met_dt_list.rds` and `.output/met_dt_list.rds`, as detailed in the README file. To visualise population structure, an MDS using weighted Euclidean distances might be better suited.
 
 - Methylome and chromatin accessibility data are far less predictive of cellular behaviour than transcriptome. Hence, these data may not be able to highlight phenotype heterogeneity, or identify outliers.
 
