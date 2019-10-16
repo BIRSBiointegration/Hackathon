@@ -36,6 +36,11 @@ The [CloudStor folder](https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ) s
 
 processed transcriptome and epigenome files containing:
 
+
+#### ./output/sample-metadata_matching-cells.txt
+
+sample metadata for matching cells passing QC in all assays (826 cells).
+
 #### ./output/scnmtseq_gastrulation_mae_826-cells_orderedFeatures.rds
 
 A `MultiAssayExperiment` object containing:
