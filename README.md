@@ -8,7 +8,11 @@ More details about the workshop are [here](https://www.birs.ca/events/2020/5-day
 - [Kim-Anh Lê Cao](https://lecao-lab.science.unimelb.edu.au/) (University of Melbourne)
 
 # Multi-omics studies
-Description of three multi-omics studies will be posted here, with easy access
+*Description of three multi-omics studies will be posted here, with easy access*
+
+## Gastrulation scNM&T-seq data 
+Three omics and more, matching single cells, see the [Data folder scNMT-seq](https://github.com/BIRSBiointegration/Hackathon/tree/master/scNMT-seq) 
+
 
 
 # Communication
