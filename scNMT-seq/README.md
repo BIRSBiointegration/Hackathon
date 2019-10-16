@@ -21,6 +21,8 @@ Easy data can be downloaded from here in the `output/` folder.
 https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ
 
 # Details about the data
+Detailed guidelines are available in scNMT-seq_guidelines in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
+
 
 ## ./data
 
