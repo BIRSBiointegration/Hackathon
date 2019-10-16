@@ -1,6 +1,6 @@
 Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14- 19, 2020 in Banff, Canada**.
 
-More details about the workshop are [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
+More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
 # Organisers
 - [Aedin Culhane](https://www.hsph.harvard.edu/aedin-culhane/) (Harvard TH Chan School of Public Health)
@@ -10,7 +10,7 @@ More details about the workshop are [here](https://www.birs.ca/events/2020/5-day
 # Multi-omics studies
 *Description of three multi-omics studies will be posted here, with easy access*
 
-## Gastrulation scNM&T-seq data 
+## Gastrulation scNMT-seq data 
 Three omics and more, matching single cells, see the [Data folder scNMT-seq](https://github.com/BIRSBiointegration/Hackathon/tree/master/scNMT-seq) 
 
 
