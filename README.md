@@ -11,7 +11,7 @@ More details about the workshop can be found in [here](https://www.birs.ca/event
 *Description of three multi-omics studies will be posted here, with easy access*
 
 ## Gastrulation scNMT-seq data 
-Three omics and more, matching single cells, see the [Data folder scNMT-seq](https://github.com/BIRSBiointegration/Hackathon/tree/master/scNMT-seq) 
+Three omics and more on 826 matching single cells, see the [Data folder scNMT-seq](https://github.com/BIRSBiointegration/Hackathon/tree/master/scNMT-seq) 
 
 
 
