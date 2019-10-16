@@ -184,9 +184,6 @@ The processed `.rds` data files can be found in the `./output` folder.
 
 - For markers, is the discrimination power / effect size correlated with site CpG coverage (proportion of CpGs covered)?
 
-- Differentially Methylated Regions are biased towards CpG rich regions. 
-
-
 
 **Possible Quick fixes for some issues highlighted above**:
  * Filter more stringently based on cell coverage so matrices  contain less `NA`s, but also less features (interpretation should be given with care).
