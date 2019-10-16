@@ -1,12 +1,12 @@
 # Background 
-This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between information from these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies are still at their infancy for single cells. We will analyse a set of data from the novel technology scNMT-seq to study mouse gastrulation.
+This study focuses on emerging assays that combine transcriptome and epigenome profiles from the same single cell, as well as the application of data integration methods to uncover the correlation structure between information from these datasets and to understand the coordination between epigenetic and transcriptomics layers in developmental and disease cell biology. Epigenomics sequencing methodologies are still at their infancy for single cells. We will analyse a set of data from the scNMT-seq to study mouse gastrulation.
 
 ![Schematic description of scNMT-seq (from Ricard Argelaguet's gitHub page.)](scnmt-seq.png)
 
 
 ## Key article
 
-Argelaguet *et al.* 2019 is available at  https://www.biorxiv.org/content/10.1101/519207v1. (A more recent version of the paper is provided). 
+Argelaguet *et al.* 2019 is available at  https://www.biorxiv.org/content/10.1101/519207v1. (this paper has been accepted for publication) 
 
 
 # Data
@@ -19,7 +19,7 @@ The study includes 826 cells matching  across all data sets (transcriptome, DNA 
 
 
 ## Download
-All processed and original data and scripts used to pre-process are avilable in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ  
+All processed and original data and scripts used to pre-process are available in here: https://cloudstor.aarnet.edu.au/plus/s/Xzf5vCgAEUVgbfQ  
 The contained files are described below.  
 Detailed guidelines are available in `scNMT-seq_guidelines` file in this folder, please have a look as we provide example of code to extract the data, and list several challenges, and give words of caution!
 
