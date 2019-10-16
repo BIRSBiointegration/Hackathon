@@ -1,0 +1,309 @@
+---
+title: 'Mouse gastrulation: scNMT-seq'
+author: "Data prepared by Al Abadi, Kim-Anh Lê Cao"
+date: \today
+output:
+  pdf_document:
+    citation_package: biblatex
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  highlight: zenburn
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '3'
+editor_options:
+  chunk_output_type: console
+header-includes:
+- \usepackage{float}
+- \floatplacement{figure}{H}
+- \usepackage{fancyhdr}
+- \usepackage{xcolor, hyperref}
+- \usepackage{lipsum}
+- \setlength{\headheight}{28pt}
+- \setlength{\footskip}{25pt}
+- \pagestyle{fancy}
+- \renewcommand{\headrulewidth}{0.5pt}
+- \renewcommand{\footrulewidth}{0.5pt}
+- \rhead{\thepage}
+- \hypersetup{colorlinks   = true, linkcolor=blue, urlcolor  = blue}
+- \fancypagestyle{plain}{\pagestyle{fancy}}
+- \cfoot{\scriptsize Melbourne Integrative Genomics, School of Mathematics and Statistics
+  | The University of Melbourne, VIC 3010 \\ \url{http://mixomics.org/} | \url{http://lecao-lab.science.unimelb.edu.au/}}
+
+---
+
+```{r global_options, include=FALSE}
+library(knitr)
+# global options
+knitr::opts_chunk$set(
+    dpi = 100,
+    echo = TRUE,
+    warning = FALSE,
+    message = FALSE,
+    eval = TRUE,
+    fig.show = TRUE,
+    fig.width = 7,
+    fig.height = 6,
+    fig.align = 'center',
+    out.width = '50%'
+)
+```
+
+
+# Background 
+Background and easy data link is provided in the Readme_data file.
+
+# Data 
+## Load libraries
+```{r, results = 'hide'}
+# packages to load
+library(mixOmics)
+library(kableExtra)
+library(MultiAssayExperiment)
+
+# to increase memory size if needed
+file.create(".Renviron")
+cat("R_MAX_VSIZE=100Gb", file = ".Renviron")
+```
+
+
+## Load  the data
+The data are stored as a `MultiAssayExperiment` object (see cheatsheet provided in the shared folder `Guidelines`, and this [link](https://bioconductor.org/packages/devel/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html)) to handle and sample match multi-omics data more efficiently. 
+
+All annotations used M. *musculus* GRCm38 mouse genome.
+
+```{r}
+# MAE experiment:
+download.file(url = "https://cloudstor.aarnet.edu.au/plus/s/kzvLWezvcL5HFXJ/download",
+              destfile = 'rdsfile.rds')
+
+gastru.mae <- readRDS(file ='rdsfile.rds')
+gastru.mae  # list of objects available
+
+
+
+# the meta data
+#colData(gastru.mae)
+
+# meta data for 'rna' data set
+# note: a few NA's
+knitr::kable(summary(as.factor(colData(gastru.mae[,,'rna'])$lineage10x_2), 
+                     caption = 'Lineage information per cell, note that there are a few NA values'),
+             format = 'markdown') 
+
+knitr::kable(summary(as.factor(colData(gastru.mae[,,'rna'])$stage),
+              caption = 'Gastrulation stage information per cell'),
+             format = 'markdown') 
+knitr::kable(summary(as.factor(colData(gastru.mae[,,'rna'])$stage_lineage),
+              caption = 'Gastrulation stage x lineage information per cell'),
+             format = 'markdown')
+```
+
+# Description of the different data sets
+
+## Transriptome data
+The transcriptomics data were normalised using `scran`. Other methods can be used if you wish by retrieving the raw data from the `./data` folder from the easy access link). We advise gene filtering by the most variable genes (we provide the code in this .Rmd file).
+
+## Epigenome data
+The methylome (`met`) and the accessibility data (`acc`) can be summarised over overlapping genic regions (such as gene bodies and gene promoters) and CG islands, as well as other genomic regions of epigenetic interest. In particular, and in addition to the datasets for gene-body and promoter methylome, we have chosen the following 3 regions which were highlighted in the original publication as epigenetically heterogeneous during development:
+
+- P300: enhancer sites where p300 TFs bind
+- CTCF binding sites: The primary role of CTCF transcription factors is thought to be in regulating the 3D structure of chromatin.
+- DHS:  In these specific regions of the genome, chromatin has lost its condensed structure, exposing the DNA and making it accessible.
+
+Thus, we can investigate various subsets of DNA methylation (5 data sets) and DNA accessibility (5 data sets).
+
+The features in epigenetic data (`acc` and `met`) are ranked  according to their level of estimated biological variation in the assay matrices, after accounting for the uncertainty in observations due to the number of total CpGs observed in the region.
+
+### Pre-processing of epigenome data
+
+From the data provided by Argelaguet *et al.* (in `./data` folder), we re-calculated the `met` and `acc` rates with a beta(1,1) prior so that the Standard Errors (SE) of estimates can be used as weights as explained below. 
+
+We required a minimum of 3 calls in the region followed by a stringent cell detection filtering of ~ 60% (500 cells out of 826 matching ones) for acc data and ~50% (400/826 cells) for met data which on average had less coverage. These selected thresholds can be changed. 
+In the easy data we provide, features were sorted according to the lower bound of their estimated variance 95% confidence interval. We used the custom-made function `calc_site_stats` which can be found in the `.Rmd` version of this guide with its documentation and also in the `./src/utils/utils.R` file. This function also calculates a weight for each estimation based on the SE estimate (see function description) which can be used in various analyses.
+
+```{r, eval = FALSE, echo=FALSE}
+#' Calculate Site Stats 
+calc_site_stats <- function(filePath=NULL, ## Full or relative path to a tsv file in ./data/...
+                            sample_name = ifelse(grep("/met/",filePath),"id_met", "id_acc"), ## character, name of sample to output compatible with metadata.
+                            keep_samples = NULL,## samples to keep, if filtering is required.
+                            min_N = 3, ## minimum number of calls required at loci
+                            min_cov = 400, ## minimum number of cells having at least min_N calls at loci
+                            alpha = 0.1) ## significance level threshold used for confidence interval
+{
+    require(data.table)
+
+    ## helper functions - weights based on SE of mean methylation rate given total calls
+    ## with a binomial distribution for site methylation Random Variable (R) - i.e. R = Bin(total, r)
+    weight_se <- function(r, total ){
+        se2 <- r*(1-r)/(total)
+        w <- 1/se2
+        return(w)
+    }
+    
+    ## set column names
+    colNames <- c(sample_name,"id","anno","Nmet","N","rate")
+    dt <- fread(filePath) %>% 
+        set_colnames(colNames) 
+    ## sample filtering
+    if (!is.null(keep_samples))
+        dt <-  dt[dt[[colNames[1]]] %in% keep_samples]
+    
+    dt %>% 
+        .[N >= min_N] %>% ## minimum number of calls at region
+        .[,cell_cov:=.N, by=c("anno", "id")] %>%  ## add cell detection
+        .[cell_cov >= min_cov] %>% ## filter by cell detection (coverage)
+        .[,rate:=(Nmet+1)/(N+2)] %>% ## MAP estimate for rate
+        .[,wij:=weight_se(rate, N)] %>%  ## weights based on SE of MAP estimates
+        .[,rbar:=sum(wij*rate)/sum(wij), by=c('anno', 'id')] %>%  ## mean across cells
+        .[,n_i:= (sum(wij)^2 - sum(wij^2))/sum(wij), by=c('anno', 'id')] %>%  ## sum of sample weights at region
+        .[,vhat:= sum(wij*(rate-rbar)^2)/n_i,  by=c('anno', 'id')] %>%  ## site variance across cells
+        .[,lci:= n_i*vhat/(qchisq(p=1-alpha/2, df = n_i)),  by=c('id', 'anno')] #%>%  ## lower bound of CI
+
+}
+
+```
+
+
+The processed `.rds` data files can be found in the `./output` folder.
+
+
+### Caution about epigenome data
+
+- As highlighted above, the data provided are ordered based on increasing biological variation (the top features are of most interest)
+
+- All epigenome data include a **large amount** of missing values (a proportion of 35-40\%!). You may choose to either estimate missing values, or choose / develop a method that can handle missing values.
+
+- You will need to compromise between estimate uncertainty and the amount of data missing: if you put more stringent requirements on minimum number of calls at a given locus, more data will be discarded, resulting in matrices with more `NA`s.
+
+- We do not recommend you run PCA on the epigenome data as it does not account for the uncertainties we measure on the methylation and accessibility rates. Try to account for it using the given SE in `.output//met_dt_list.rds` and `.output/met_dt_list.rds`, as detailed in the ReadMe file. To visualise population structure, an MDS using weighted Euclidean distances might be better suited.
+
+- Methylome and chromatin accessibility data are far less predictive of cellular behaviour than transcriptome. Hence, these data may not be able to highlight phenotype heterogeneity, or identify outliers.
+
+- For markers, is the discrimination power / effect size correlated with site CpG coverage (proportion of CpGs covered)?
+
+- Differentially Methylated Regions are biased towards CpG rich regions. 
+
+
+
+**Possible Quick fixes for some issues highlighted above**:
+ * Filter more stringently based on cell coverage so matrices  contain less `NA`s, but also less features (interpretation should be given with care).
+* Replace  missing values by the mean value across all cells (or use other imputation approach).
+
+
+
+# Prepare the data for analysis
+## RNA data filtering
+We use the following function to filter the top most variable genes from the RNA-seq data (open the .Rmd file to see the code of the function `get_hvgs_rna`)
+
+```{r, echo = FALSE}
+# function to extract the top most variable n_genes from the RNA data
+get_hvgs_rna <- function(log_counts = assay(gastru.mae, "rna"), ## a matrix of normalised counts
+                         n_genes = 2000, ## No. of genes
+                         use_bio=TRUE, ## choose based on biological variance or total variance?
+                         do_plot = FALSE ## plot mean-variance dependency pre and post decomposition?
+                         ){ 
+  require(scran)
+  fit <- trendVar(x = log_counts)
+  decomposed_var <- decomposeVar(x = log_counts, fit = fit, use.spikes=FALSE)
+  
+  if (do_plot) {
+    require(ggplot2)
+    ## total variance
+    p_aft <- ggplot(as.data.frame(decomposed_var)) + geom_point(aes(x=mean, y=total), alpha=0.4) +
+      labs(x="mean log expression", y = "total variance")
+    print(p_aft)
+    ## decomposed bio
+    p_bef <- ggplot(as.data.frame(decomposed_var)) + geom_point(aes(x=mean, y=bio), alpha=0.4) +
+      labs(x="mean log expression", y = "decomposed biological variance")
+    print(p_bef)
+  }
+  if (use_bio) {
+    decomposed_var <- decomposed_var[order(-decomposed_var$bio),]
+  } else {
+     decomposed_var <- decomposed_var[order(-decomposed_var$total),]
+  }
+  hvgs <- rownames(decomposed_var)[1:n_genes]
+  return(log_counts[hvgs,])
+}
+```
+
+```{r}
+# first, extract the data and filter the most variable genes
+X <- get_hvgs_rna(log_counts = assay(gastru.mae, "rna"), ## a matrix of normalised counts
+                    n_genes = 5000, ## No. of genes
+                    use_bio=TRUE, ## choose based on biological variance or total variance?
+                    do_plot = FALSE ## plot mean-variance dependency pre and post decomposition?
+                   )
+#dim(X)
+
+# transpose if needed
+X <- t(X)
+dim(X)
+```
+
+Example of extracting one dataset and PCA:
+
+```{r, eval = TRUE}
+metadata.X <- colData(gastru.mae[,,'rna'])
+# assign the NA lineage to Unknown for sample plots
+metadata.X$lineage10x_2[is.na(metadata.X$lineage10x_2)] = 'Unknown'
+#summary(as.factor(metadata.X$lineage10x_2))
+
+library(mixOmics)
+pca.X = pca(X, ncomp = 5)
+#plot(pca.X)
+plotIndiv(pca.X, group = metadata.X$stage, legend = TRUE, ind.names =FALSE, title = 'PCA on RNA data')
+```
+
+
+## DNA chromatin accessibility
+Here is an example of code to extract a data set of interest and the matching meta data:
+
+```{r}
+name_assay = 'acc_CTCF' # can be 'acc_p300', 'acc_CTCF', 'acc_cgi'
+X <- assay(gastru.mae[,,name_assay])
+# extract relevant meta data
+metadata.X <- colData(gastru.mae[,,name_assay])
+# assign the NA lineage to Unknown
+metadata.X$lineage10x_2[is.na(metadata.X$lineage10x_2)] = 'Unknown'
+
+#summary(as.factor(metadata.X$lineage10x_2))
+
+# percentage of missing values
+sum(is.na(X))/(nrow(X)*ncol(X))  
+```
+
+## Several data sets
+Here is an example to extract the list of all assays from `gastru.mae`. Note that you may not need to extract **all** data sets!
+
+```{r}
+X <- assays(gastru.mae)
+#lapply(X, dim)
+metadata.X <- colData(gastru.mae)
+#metadata.X$stage
+```
+
+
+# Types of analysis challenges to address
+
+- Identification of multi-omics signatures that characterise lineage, stage or both.
+- Handling missing values
+- Do epigenetic changes in some genomic contexts affect cell fate decision than others and how?
+
+
+# If you wish to help out
+
+* We use a fixed threshold for filtering, while every site has potentially different number of CpGs. How can we use an adaptive filtering?
+* How can we weight the data using the SE estimated (provided in `.output//met_dt_list.rds` and `.output/met_dt_list.rds`) so we can use the conventional component-based approaches directly?
+* The protocol assumes every C to T conversion is the result of deamination of an unmethylated C, which ignores the C to T mutations in the genome. This introduces errors in methylation estimations. What is the most effective way to account for this in the absence of a wildtype genome?
+* Any way to account for bias towards CpG rich regions in the methylation data?
+
+
+# Acknowledgements
+Ricard Argelaguet (Stegle lab) for providing the data and Al Abadi (Lê Cao lab) for re-processing some part of the data. Technical questions can be directed to Al and Ricard on Slack.
+
+
+

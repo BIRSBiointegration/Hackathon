@@ -19,3 +19,4 @@ All communication will be via Slack. Join our channel at birsbiointegration.slac
 - Abstract due on **March 1st 2020** (more details to come on the format - we expect preliminary analyses to be presented) 
 - Abstract selection announced **March 14th 2020** 
 - Reproducible analyses shared on our GitHub on **June 1st 2020**
+
