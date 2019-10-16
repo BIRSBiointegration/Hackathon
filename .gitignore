@@ -1,3 +1,4 @@
 *_cache
-rdsfile.rds
-.Renviron
+**/*.rds
+.*
+!.gitignore
