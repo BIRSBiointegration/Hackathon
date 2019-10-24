@@ -29,8 +29,8 @@ The main goal of the multi-omics analysis for this data in the workshop is metho
 ## Download 
 
 All original and processed data and scripts used to pre-process are available on [Dropbox](https://www.dropbox.com/sh/avj4nrd4la5i88u/AACafWwBbE-xsLvOGDwRZDpYa?dl=0). The core processed data are described in the **Easy data** section below. 
-Extra downloads options available on the spatial data bitbucket page (https://bitbucket.org/qzhu/smfish-hmrf/src/master/)
-The orginal scRNAseq count matrix can be downloaded from GEO: (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71585)
+Extra downloads options available on the spatial data [bitbucket page](https://bitbucket.org/qzhu/smfish-hmrf/src/master/)
+The orginal scRNAseq count matrix can be downloaded from [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71585).
 
 ## Easy data 
 
