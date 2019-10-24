@@ -38,15 +38,33 @@ Easy data link to find files for this project: (https://www.dropbox.com/sh/avj4n
 
 ## Data directories
 
-The following files contain cross-platform noramlized expression for 69 genes matched between both datasets used for spatial domain identification and SVM prediction in Zhu *et al*.
+The following files contain cross-platform noramlized expression for matched genes between both datasets used for spatial domain identification and SVM prediction in Zhu *et al*.
 
 #### /tasic_training_b2.txt 
 
-txt file of normalized scRNAseq data 69 genes 
+txt file of normalized scRNAseq data for `113 genes x 1723 cells`
+
+```r
+        V2 V3 V4 V5 V6
+abca15  11 42 17 42 35
+abca9   22 46 22 46 39
+acta2   15 47 15 42 34
+adcy4   12 45 12 45 38
+aldh3b2 27 49 27 49 42
+```
 
 #### /seqfish_cortex_b2_testing.txt 
 
-txt file of normalized seqFISH data
+txt file of normalized seqFISH data for `113 x 1597`
+
+```r
+         V2 V3 V4 V5  V6
+abca15   68 49 50 39  31
+abca9    41 42 38 36  47
+acta2    25 23 16 21  29
+adcy4    39 54 37 18  37
+aldh3b2 101 47 41 52 101
+```
 
 #### /seqfish_labels.tsv
 
