@@ -55,7 +55,7 @@ aldh3b2 27 49 27 49 42
 
 #### /seqfish_cortex_b2_testing.txt 
 
-txt file of normalized seqFISH data for `113 x 1597`
+txt file of normalized seqFISH data for `113 genes x 1597 cells`
 
 ```r
          V2 V3 V4 V5  V6
