@@ -28,8 +28,8 @@ The main goal of the multi-omics analysis for this data in the workshop is metho
 
 ## Download 
 
-All original and processed data and scripts used to pre-process are available here: (https://www.dropbox.com/sh/avj4nrd4la5i88u/AACafWwBbE-xsLvOGDwRZDpYa?dl=0). The core processed data are described in the **Easy data** section below. 
-Extra downloads options available on the spatial data gitHub page (https://bitbucket.org/qzhu/smfish-hmrf/src/master/)
+All original and processed data and scripts used to pre-process are available on [Dropbox](https://www.dropbox.com/sh/avj4nrd4la5i88u/AACafWwBbE-xsLvOGDwRZDpYa?dl=0). The core processed data are described in the **Easy data** section below. 
+Extra downloads options available on the spatial data bitbucket page (https://bitbucket.org/qzhu/smfish-hmrf/src/master/)
 The orginal scRNAseq count matrix can be downloaded from GEO: (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71585)
 
 ## Easy data 
@@ -38,23 +38,55 @@ Easy data link to find files for this project: (https://www.dropbox.com/sh/avj4n
 
 ## Data directories
 
-The following files contain cross-platform noramlized expression for 69 genes matched between both datasets used for spatial domain identification and SVM prediction.
+The following files contain cross-platform noramlized expression for 69 genes matched between both datasets used for spatial domain identification and SVM prediction in Zhu *et al*.
 
 #### /tasic_training_b2.txt 
 
-Normalized scRNAseq data Tasic et al
+txt file of normalized scRNAseq data 69 genes 
 
 #### /seqfish_cortex_b2_testing.txt 
 
-Normalized seqFISH data
+txt file of normalized seqFISH data
 
-#### /seqfish_cortex_b2.labels 
+#### /seqfish_labels.tsv
 
-spatial cluster labels for seqfish
+tsv file of spatial cluster labels and SVM learned cell types for seqFISH
 
-#### /tasic.labels 
+Fields (tab-delimited): 
 
-cell type labels for scRNAseq
+1. Cell ID
+
+2. Spatial cluster
+
+3. Cell type class
+
+4. ID of cell type class
+
+5. (irrelevant)
+
+6. Probability of the highest probability class
+
+```r
+     V1 V2                   V3 V4 V5        V6
+1     1  5 Glutamatergic Neuron  3  - 0.9827927
+2     2  5 Glutamatergic Neuron  3  - 0.9445903
+3     3  5 Glutamatergic Neuron  3  - 0.8299232
+4     4  5 Glutamatergic Neuron  3  - 0.4659458
+5     5  5 Glutamatergic Neuron  3  - 0.9863798
+````
+
+#### /tasic_labels.tsv
+
+tsv file of cell type labels for scRNAseq
+
+```r
+                      V1                             V2      V3
+1              Astrocyte      Calb2_tdTpositive_cell_46   upper
+2              Astrocyte      Calb2_tdTpositive_cell_48   upper
+3              Astrocyte      Calb2_tdTpositive_cell_50   lower
+4              Astrocyte      Calb2_tdTpositive_cell_53   lower
+5              Astrocyte      Calb2_tdTpositive_cell_58   lower
+```
 
 ### Additional files 
 
@@ -65,3 +97,4 @@ Spatial cell coordinates
 #### /hmrf-usage/data/fcortex.gene.ALL.txt 
 
 z-scored matrix incorporating the spatial gene expression of 69 genes
+
