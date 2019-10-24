@@ -2,7 +2,7 @@
 
 This study integrates sequencing and imaging-based single-cell transcriptomic profiling methods.
 The authors showed that incorportation of scRNAseq data improved cell type mapping over using seqFISH data analysis alone, 
-while including the seqFISH data enabled the identification of spatial structure in the scRNAseq data. For our workshop, we focus on a subset of these data that contain matched seqFISH and scRNAseq data for the adult mouse visual cortex.
+while including the seqFISH data enabled the identification of spatial structure in the scRNAseq data (Figure from Zhu *et al* 2018). For our workshop, we focus on a subset of these data that contain matched seqFISH and scRNAseq data for the adult mouse visual cortex.
 
 ![Overview of the integration of seqFISH and scRNAseq (from Figure 1 of Zhu et al 2018)](Fig1.jpg)
 
@@ -38,7 +38,7 @@ Easy data link to find files for this project: (https://www.dropbox.com/sh/avj4n
 
 ## Data directories
 
-The following files contain cross-platform noramlized expression for matched genes between both datasets used for spatial domain identification and SVM prediction in Zhu *et al*.
+The following files contain cross-platform noramlized expression for matched genes between both datasets used for spatial domain identification and SVM prediction in Zhu *et al* 2018.
 
 #### /tasic_training_b2.txt 
 
