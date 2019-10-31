@@ -13,7 +13,8 @@ More details about the workshop can be found in [here](https://www.birs.ca/event
 ## Gastrulation scNMT-seq data 
 Three omics and more on 826 matching single cells, see the [Data folder scNMT-seq](https://github.com/BIRSBiointegration/Hackathon/tree/master/scNMT-seq) that contains a README and guidelines (including a list of challenges to tackle, plus more if you wish to help out).
 
-
+## Cortex seq-FISH data
+Two omics with ~1600 single cells each and 113 matched genes, see the [Data folder seqFISH](https://github.com/BIRSBiointegration/Hackathon/tree/master/seqFISH) that contains a README and challenges to address. Links to additional data are included, if you want to explore further. 
 
 # Communication
 All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtNzc4Njk4OTMwNDAzLTk2MTU2ZGQyMWE5ZTc1MmU3NDU2ZmFiNzRmMzcwYjZkN2JkYjcyNTU5NGJhNzhiNWQ4NjI3NmNjYmQxZWZkNGU) or contact aedin[@]jimmy.harvard.edu
