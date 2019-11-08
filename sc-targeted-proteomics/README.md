@@ -7,10 +7,10 @@ Integrating 'omics datasets across technologies and experiments
     -   [1. Mass cytometry (CyTOF)](#mass-cytometry-cytof)
     -   [2. MIBI-TOF](#mibi-tof)
 -   [R objects for easy-access to the datasets](#r-objects-for-easy-access-to-the-datasets)
-    -   [1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data](#1-wagner-et-al.-mass-tag-cytof-breast-cancer-data)
+    -   [1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data](#wagner-et-al.-mass-tag-cytof-breast-cancer-data)
         -   [*masstagSCE.rda*](#masstagsce.rda)
         -   [*masstagFS.rda*](#masstagfs.rda)
-    -   [2. Keren et al., MIBI-TOF Breast Cancer Data](#2-keren-et-al.-mibi-tof-breast-cancer-data)
+    -   [2. Keren et al., MIBI-TOF Breast Cancer Data](#keren-et-al.-mibi-tof-breast-cancer-data)
         -   [*mibiSCE.rda*](#mibisce.rda)
 -   [References](#references)
 
@@ -84,7 +84,7 @@ library(reshape2)
 library(CATALYST)
 ```
 
-## 1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data
+1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data
 ---------------------------------------------------
 
 Wagner et al. (2019) measured 73 proteins in two panels (immune, tumor) in 194 samples from 143 subjects (140 breast cancer, 3 cancer-free; of the 140 breast cancer patients, 6 triple-negative).
@@ -98,7 +98,7 @@ Both .rda files have multiple objects (livecells, cd45, epith, tcell, myeloid) w
 
 Datasets have been normalized (separately by panel), gated for live cells, downsampled for further analysis (where applicable as described above), and clustered (by Phenograph). These objects correspond to the expression data published by the authors at: <https://data.mendeley.com/datasets/gb83sywsjc/1>. At this linke, there are also immunofluorescence images available for download. Full methods including computational workflow are included in the [supplementary materials](https://www.sciencedirect.com/science/article/pii/S0092867419302673#app2).
 
-### *masstagSCE.rda*
+##### *masstagSCE.rda*
 
 loads 5 SingleCellExperiment objects (cells are in columns, and markers are in rows).
 
@@ -168,7 +168,7 @@ sum(is.na(rowData(cd45.sce_dropna)))
 
     ## [1] 0
 
-### *masstagFS.rda*
+##### *masstagFS.rda*
 
 This .rda file contains 13 objects that can be analyzed using the CATALYST package. Because CATALYST flowSet objects do not include cell annotation (colData) and feature annotation (rowData), we provide these as dataframes:
 
@@ -298,10 +298,10 @@ head(immune_panel)
     ## 5 Nd145Di     CD197   G043H7 CCR7       
     ## 6 Nd146Di     CD45RA  HI100  CD45RA
 
-## 2. Keren et al., MIBI-TOF Breast Cancer Data
+2. Keren et al., MIBI-TOF Breast Cancer Data
 --------------------------------------------
 
-### *mibiSCE.rda*
+##### *mibiSCE.rda*
 
 Keren et al. (2018) quantified in-situ expression of 36 proteins in 41 triple-negative breast cancer patients. We provide **mibi.sce** as a SingleCellExperiment object. (1 object with expression matrix dimensions 49 rows x 201,656 columns and additional row/column annotations; 27.1 MB)
 
