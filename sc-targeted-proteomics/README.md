@@ -84,7 +84,7 @@ library(reshape2)
 library(CATALYST)
 ```
 
-1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data
+## 1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data
 ---------------------------------------------------
 
 Wagner et al. (2019) measured 73 proteins in two panels (immune, tumor) in 194 samples from 143 subjects (140 breast cancer, 3 cancer-free; of the 140 breast cancer patients, 6 triple-negative).
@@ -298,7 +298,7 @@ head(immune_panel)
     ## 5 Nd145Di     CD197   G043H7 CCR7       
     ## 6 Nd146Di     CD45RA  HI100  CD45RA
 
-2. Keren et al., MIBI-TOF Breast Cancer Data
+## 2. Keren et al., MIBI-TOF Breast Cancer Data
 --------------------------------------------
 
 ### *mibiSCE.rda*
