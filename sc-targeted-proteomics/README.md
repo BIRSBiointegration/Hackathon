@@ -70,7 +70,7 @@ R objects for easy-access to the datasets
 
 We have read and consolidated these data (including clinical features) into R objects for ease of analysis.
 
-These files can be downloaded from this folder: <https://drive.google.com/drive/folders/1vY3ANRIcrrhlwNDr6GLcT_Tk8pd42TU-?usp=sharing>.
+These files can be downloaded from this folder: <https://drive.google.com/open?id=1Qb6VgVkWfy2x5Dr7kzqMAfzOLas1G6v->.
 
 Starting by loading relevant packages..
 
