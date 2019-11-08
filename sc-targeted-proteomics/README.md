@@ -98,7 +98,7 @@ Both .rda files have multiple objects (livecells, cd45, epith, tcell, myeloid) w
 
 Datasets have been normalized (separately by panel), gated for live cells, downsampled for further analysis (where applicable as described above), and clustered (by Phenograph). These objects correspond to the expression data published by the authors at: <https://data.mendeley.com/datasets/gb83sywsjc/1>. At this linke, there are also immunofluorescence images available for download. Full methods including computational workflow are included in the [supplementary materials](https://www.sciencedirect.com/science/article/pii/S0092867419302673#app2).
 
-##### *masstagSCE.rda*
+#### *masstagSCE.rda*
 
 loads 5 SingleCellExperiment objects (cells are in columns, and markers are in rows).
 
@@ -168,7 +168,7 @@ sum(is.na(rowData(cd45.sce_dropna)))
 
     ## [1] 0
 
-##### *masstagFS.rda*
+#### *masstagFS.rda*
 
 This .rda file contains 13 objects that can be analyzed using the CATALYST package. Because CATALYST flowSet objects do not include cell annotation (colData) and feature annotation (rowData), we provide these as dataframes:
 
@@ -301,7 +301,7 @@ head(immune_panel)
 2. Keren et al., MIBI-TOF Breast Cancer Data
 --------------------------------------------
 
-##### *mibiSCE.rda*
+#### *mibiSCE.rda*
 
 Keren et al. (2018) quantified in-situ expression of 36 proteins in 41 triple-negative breast cancer patients. We provide **mibi.sce** as a SingleCellExperiment object. (1 object with expression matrix dimensions 49 rows x 201,656 columns and additional row/column annotations; 27.1 MB)
 
