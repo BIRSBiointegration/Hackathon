@@ -7,10 +7,10 @@ Integrating 'omics datasets across technologies and experiments
     -   [1. Mass cytometry (CyTOF)](#mass-cytometry-cytof)
     -   [2. MIBI-TOF](#mibi-tof)
 -   [R objects for easy-access to the datasets](#r-objects-for-easy-access-to-the-datasets)
-    -   [1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data](#wagner-et-al.-mass-tag-cytof-breast-cancer-data)
+    -   [1. Wagner et al., Mass-Tag CyTOF Breast Cancer Data](#1-wagner-et-al.-mass-tag-cytof-breast-cancer-data)
         -   [*masstagSCE.rda*](#masstagsce.rda)
         -   [*masstagFS.rda*](#masstagfs.rda)
-    -   [2. Keren et al., MIBI-TOF Breast Cancer Data](#keren-et-al.-mibi-tof-breast-cancer-data)
+    -   [2. Keren et al., MIBI-TOF Breast Cancer Data](#2-keren-et-al.-mibi-tof-breast-cancer-data)
         -   [*mibiSCE.rda*](#mibisce.rda)
 -   [References](#references)
 
