@@ -96,7 +96,7 @@ We provide the data in two formats:
 
 Both .rda files have multiple objects (livecells, cd45, epith, tcell, myeloid) which contain all live, CD45+, epithelial, T and myeloid cells respectively. (more info below)
 
-Datasets have been normalized (separately by panel), gated for live cells, downsampled for further analysis (where applicable as described above), and clustered (by Phenograph). These objects correspond to the expression data published by the authors at: <https://data.mendeley.com/datasets/gb83sywsjc/1>. At this linke, there are also immunofluorescence images available for download. Full methods including computational workflow are included in the [supplementary materials](https://www.sciencedirect.com/science/article/pii/S0092867419302673#app2).
+Datasets have been normalized (separately by panel), gated for live cells, downsampled for further analysis (where applicable as described above), and clustered (by Phenograph). These objects correspond to the expression data published by the authors at: <https://data.mendeley.com/datasets/gb83sywsjc/1>. At this link, there are also immunofluorescence images available for download. Full methods including computational workflow are included in the [supplementary materials](https://www.sciencedirect.com/science/article/pii/S0092867419302673#app2).
 
 #### *masstagSCE.rda*
 
@@ -307,7 +307,7 @@ Keren et al. (2018) quantified in-situ expression of 36 proteins in 41 triple-ne
 
 Expression values are acquired by quantifying intensity of each of the cells, and normalized by cell size. Cell boundaries are determined using an adaptation of DeepCell, a CNN approach for image segmentation. The size-normalized raw intensity values are then arcsinh transformed and standardized across the markers. We begin with these transformed and standardized values, which were provided directly by the author. The code and procedure for generating these data are provided in supplementary materials of the paper (Keren et al. 2018).
 
-In addition to the raw image files already available for download from [Ionpath](https://mibi-share.ionpath.com), these expression matrices which were provided to us directly, along with labeled matrix .tiff files, and will be made directly available from the [Angelo lab website](https://www.angelolab.com/blank-2) soon.
+In addition to the pre-processed image files already available for download from [Ionpath](https://mibi-share.ionpath.com), these expression matrices which were provided to us directly, along with labeled matrix .tiff files, and will be made directly available from the [Angelo lab website](https://www.angelolab.com/blank-2) soon.
 
 ``` r
 load('data/mibiSCE.rda')
