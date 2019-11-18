@@ -63,7 +63,7 @@ The Multiplexed Ion Beam Imaging - Time of Flight (MIBI-TOF) methodology enables
 
 To learn more about this technology, we recommend this webinar presented by Prof. Michael Angelo, one of the inventors of the MIBI-TOF technology and senior author of this paper: <https://www.youtube.com/watch?v=5DiEyolLiyY>
 
-Image files are available for download from [Ionpath](https://mibi-share.ionpath.com) (requires a free account). There is also an [interactive user interface](https://www.ionpath.com/mibitracker/) for exploring the images by acquisition channel layer.
+Image files are available for download from [Ionpath](https://mibi-share.ionpath.com) (requires a free account). There is also an [interactive user interface](https://www.ionpath.com/mibitracker/) for exploring the images by acquisition channel layer. Expression matrices and segmented / labeled image .tiff files are also available for direct download from the [Angelo lab website](https://www.angelolab.com/mibi-data).
 
 R objects for easy-access to the datasets
 =========================================
@@ -307,7 +307,7 @@ Keren et al. (2018) quantified in-situ expression of 36 proteins in 41 triple-ne
 
 Expression values are acquired by quantifying intensity of each of the cells, and normalized by cell size. Cell boundaries are determined using an adaptation of DeepCell, a CNN approach for image segmentation. The size-normalized raw intensity values are then arcsinh transformed and standardized across the markers. We begin with these transformed and standardized values, which were provided directly by the author. The code and procedure for generating these data are provided in supplementary materials of the paper (Keren et al. 2018).
 
-In addition to the pre-processed image files already available for download from [Ionpath](https://mibi-share.ionpath.com), these expression matrices which were provided to us directly, along with labeled matrix .tiff files, and will be made directly available from the [Angelo lab website](https://www.angelolab.com/blank-2) soon.
+In addition to the pre-processed image files already available for download from [Ionpath](https://mibi-share.ionpath.com), these expression matrices which were provided to us directly, along with segmented and labeled matrix .tiff files. These are also available for direct download from the [Angelo lab website](https://www.angelolab.com/mibi-data).
 
 ``` r
 load('data/mibiSCE.rda')
