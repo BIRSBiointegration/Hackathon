@@ -22,6 +22,13 @@ Two targeted proteomic studies investigating the tumor-immune microenvironment i
 # Communication
 All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtNzc4Njk4OTMwNDAzLTk2MTU2ZGQyMWE5ZTc1MmU3NDU2ZmFiNzRmMzcwYjZkN2JkYjcyNTU5NGJhNzhiNWQ4NjI3NmNjYmQxZWZkNGU) or contact aedin[@]jimmy.harvard.edu
 
+## Webinar
+
+* Slides now available via [this link](https://docs.google.com/presentation/d/1tcJem9mgDHW0qP9iSWjWYScZrSsjXRRykqsiQ8eeAwA/edit#slide=id.g6b7ca50076_1_8).
+
+* The recording available via [this link](https://www.dropbox.com/sh/uosgphsbro6u17y/AABuVoqNfoMz6wU83bcr4PD2a?dl=0&preview=zoom_0.mp4).
+
+
 # Timelines
 - Studies start to be released from the week of **14th October 2019**.
 - Abstract due on **March 1st 2020** (more details to come on the format - we expect preliminary analyses to be presented) 
