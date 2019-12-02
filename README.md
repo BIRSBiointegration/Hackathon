@@ -20,7 +20,7 @@ Two omics with ~1600 single cells each and 113 matched genes, see the [Data fold
 Two targeted proteomic studies investigating the tumor-immune microenvironment in breast cancer patients using different technologies (mass cytometry and MIBI-TOF), see the [Data folder sc-targeted-proteomics](https://github.com/BIRSBiointegration/Hackathon/tree/master/sc-targeted-proteomics) which contains a README and more details on the data, with some questions to begin exploring.
 
 # Communication
-All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtNzc4Njk4OTMwNDAzLTk2MTU2ZGQyMWE5ZTc1MmU3NDU2ZmFiNzRmMzcwYjZkN2JkYjcyNTU5NGJhNzhiNWQ4NjI3NmNjYmQxZWZkNGU) or contact aedin[@]jimmy.harvard.edu
+All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtODQxNzA5OTUzMzYzLTVmNDEzNDIyMTM2MDFmYzZlM2ViMGU0NWQzYjY2ODM4OGVlYjJiOGVmNWUzYmQxYTQ1Zjc1ZTE0YmEzNDYwYWI) 
 
 ## Webinar
 
