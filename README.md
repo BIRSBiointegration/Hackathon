@@ -26,7 +26,7 @@ All communication will be via Slack. Join our channel at birsbiointegration.slac
 
 * Slides now available via [this link](https://docs.google.com/presentation/d/1tcJem9mgDHW0qP9iSWjWYScZrSsjXRRykqsiQ8eeAwA/edit#slide=id.g6b7ca50076_1_8).
 
-* The recording available via [this link](https://www.dropbox.com/sh/uosgphsbro6u17y/AABuVoqNfoMz6wU83bcr4PD2a?dl=0).
+* The recording available via [this link](https://vimeo.com/376936827).
 
 
 # Timelines
