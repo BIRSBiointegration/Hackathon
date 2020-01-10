@@ -7,6 +7,9 @@ More details about the workshop can be found in [here](https://www.birs.ca/event
 - [Elana Fertig](https://fertiglab.com/) (John Hopkins)
 - [Kim-Anh Lê Cao](https://lecao-lab.science.unimelb.edu.au/) (University of Melbourne)
 
+# Survey to fill before Jan 14th 2020
+Please fill this 3-min survey so that we can start to plan ahead! https://www.surveymonkey.com/r/HDD5X9G
+
 # Multi-omics studies
 *We provide easy access to our three multi-omics studies at the following links*.
 
