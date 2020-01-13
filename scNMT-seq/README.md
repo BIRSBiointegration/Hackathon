@@ -154,7 +154,7 @@ $ V6 <int> 0, 25, 0, 0, 17, 0, 100, 0, 0, 0, 0…   ## Proportion of loci access
 
 #### ./data/rna/parsed
 
-Expression data in `SingleCellExperiment` class with counts and [`scran`](https://bioconductor.org/packages/devel/bioc/html/scran.html)-normalised logcounts.
+Expression data for all cells (`SingleCellExperiment.rds`) and only matching cells (`SingleCellExperiment_matching-cells.rds`) in `SingleCellExperiment` class with counts and [`scran`](https://bioconductor.org/packages/devel/bioc/html/scran.html)-normalised logcounts.
 
 #### ./data/sample_metadata.txt
 
