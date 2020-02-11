@@ -6,7 +6,7 @@ This study focuses on emerging assays that combine transcriptome and epigenome p
 
 ## Key article
 
-Argelaguet *et al.* 2019 is available at https://www.biorxiv.org/content/10.1101/519207v1 (this paper has been accepted for publication).
+Argelaguet *et al.* 2019 is available at https://www.nature.com/articles/s41586-019-1825-8. The provided data are the snapshot from OCT 2019 and have had slight changes in the published article. 
 
 
 # Data
