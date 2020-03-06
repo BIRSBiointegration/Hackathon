@@ -286,7 +286,7 @@ metadata.X <- colData(gastru.mae)
 
 - Identification of multi-omics signatures that characterise lineage, stage or both.
 - Handling missing values
-- Do epigenetic changes in some genomic contexts affect cell fate decision than others and how?
+- Do epigenetic changes in some genomic contexts affect cell fate decision more than others? If so, how?
 
 
 # If you wish to help out
