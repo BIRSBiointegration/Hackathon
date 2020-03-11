@@ -42,7 +42,7 @@ plot(ras_obj, main = strsplit(IMG,'/')[[1]][2])
 ![](raster_img_ex.png)
 
 The raster object can be accessed like a matrix. Each of the values in
-the 2000 by 2000 matrix indicates the cell lable for that location in
+the 2000 by 2000 matrix indicates the cell label for that location in
 the image.
 
 For example, if we zoom into the pixels in the middle of the image, we
