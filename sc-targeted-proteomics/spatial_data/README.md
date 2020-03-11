@@ -16,7 +16,8 @@ library(raster)
 In the *TNBC\_shareCellData* there are 41 image files, each
 corresponding to one patient. Within those image files, there is a
 matrix layer containing the ID of a particular cell for that patient,
-which corresponds to the *cellLabelInImage*. This means that the
+which corresponds to the *cellLabelInImage*. This can be used to link the 
+proteomic measurements with location.
 
 The .tiff files can be saved into raster objects:
 
