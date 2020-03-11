@@ -4,7 +4,14 @@ raster can be used to access the coordinate labels
 Download and unzip the full spatial data files from here:
 <a href="https://www.angelolab.com/mibi-data" class="uri">https://www.angelolab.com/mibi-data</a>
 
-    ## Loading required package: sp
+``` r
+PATH <- '~/Desktop/dfci research/BIRS/mibitof/'
+IMG <- 'TNBC_shareCellData/p2_labeledcellData.tiff'
+
+setwd(PATH)
+
+library(raster)
+```
 
 In the *TNBC\_shareCellData* there are 41 image files, each
 corresponding to one patient. Within those image files, there is a
@@ -31,7 +38,7 @@ ras_obj
 plot(ras_obj, main = strsplit(IMG,'/')[[1]][2])
 ```
 
-![](using_raster_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](raster_img_ex.png)
 
 The raster object can be accessed like a matrix. Each of the values in
 the 2000 by 2000 matrix indicates the cell lable for that location in
