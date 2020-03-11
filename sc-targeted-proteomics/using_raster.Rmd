@@ -1,0 +1,53 @@
+---
+title: "Using raster"
+author: "Lauren Hsu"
+date: "3/10/2020"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## raster can be used to access the coordinate labels
+
+Download and unzip the full spatial data files from here: https://www.angelolab.com/mibi-data
+
+```{r echo = FALSE}
+PATH <- '~/Desktop/dfci research/BIRS/mibitof/'
+IMG <- 'TNBC_shareCellData/p2_labeledcellData.tiff'
+
+setwd(PATH)
+
+library(raster)
+
+```
+
+In the _TNBC_shareCellData_ there are 41 image files, each corresponding to one patient. Within those image files, there is a matrix layer containing the ID of a particular cell for that patient, which corresponds to the *cellLabelInImage*. This means that the 
+
+The .tiff files can be saved into raster objects:
+```{r}
+ras_obj <- raster(IMG)
+ras_obj
+plot(ras_obj, main = strsplit(IMG,'/')[[1]][2])
+```
+
+The raster object can be accessed like a matrix. Each of the values in the 2000 by 2000 matrix indicates the cell lable for that location in the image. 
+
+For example, if we zoom into the pixels in the middle of the image, we can see that cell 2395 is in the middle:
+
+```{r}
+ras_obj[1500:1510,1500:1510]
+```
+
+The raster object can also be converted easily into a matrix:
+
+```{r}
+space_mat <- as.matrix(ras_obj)
+space_mat[1530:1510,1530:1510]
+```
+
+We can see that moving a bit up and to the right brings us to the border between cell 2395, cell 2423, and some background noise (0; 1)
+
