@@ -116,3 +116,5 @@ space_mat[1530:1510,1530:1510]
 
 We can see that moving a bit up and to the right brings us to the border
 between cell 2395, cell 2423, and some background noise (0; 1)
+
+Visit the [raster documentation page](https://rspatial.org/raster/spatial/8-rastermanip.html) at [R spatial](https://rspatial.org/raster/) to learn more.
