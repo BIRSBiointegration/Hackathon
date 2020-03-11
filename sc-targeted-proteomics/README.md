@@ -65,6 +65,8 @@ To learn more about this technology, we recommend this webinar presented by Prof
 
 Image files are available for download from [Ionpath](https://mibi-share.ionpath.com) (requires a free account). There is also an [interactive user interface](https://www.ionpath.com/mibitracker/) for exploring the images by acquisition channel layer. Expression matrices and segmented / labeled image .tiff files are also available for direct download from the [Angelo lab website](https://www.angelolab.com/mibi-data).
 
+If you are interested in working with the spatial coordinates, we also prepared a [short explainer on how to connect the image files to the cells](https://github.com/BIRSBiointegration/Hackathon/tree/master/sc-targeted-proteomics/spatial_data).
+
 R objects for easy-access to the datasets
 =========================================
 
