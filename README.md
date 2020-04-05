@@ -1,12 +1,10 @@
-Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14- 19, 2020 in Banff, Canada**.
-
-More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
+Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14- 19, 2020 in Banff, Canada**. More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
 Due to covid-19, the event will go *virtual*. We have two main aims for this meeting:
 
-- Hackathon analyses on our three case studies to identify hurdles, limitations and methods development strategies to move forward in the field of multi omics single cell
+- **Hackathon analyses on our three case studies** to identify hurdles, limitations and methods development strategies to move forward in the field of multi omics single cell
 
-- Draft of a white paper about the challenges highlighted during the hackathon, discuss pitfalls and guidelines to develop computational methods in this fast changing area.
+- **Draft of a white paper about the challenges highlighted during the hackathon**, discuss pitfalls and guidelines to develop computational methods in this fast changing area.
 
 We are currently working on an outline for the white paper, and we will ask your input on a shared document. This outline will also help focusing on particular aspects of the analyses. 
 
@@ -42,7 +40,7 @@ All communication will be via Slack. Join our channel at birsbiointegration.slac
 
 
 # Timelines
-- Studies start to be released from the week of **14th October 2019**.
+- Studies start to be released from the week of 14th October 2019.
 - Abstract due on March 9 2020 (more details to come on the format - we expect preliminary analyses to be presented) 
 - Abstract selection announced March 16 2020 
 - Reproducible analyses shared on our GitHub on **June 1st 2020**
