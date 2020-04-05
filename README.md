@@ -2,6 +2,15 @@ Welcome to our repository to prepare for our upcoming workshop *Mathematical Fra
 
 More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
+Due to covid-19, the event will go *virtual*. We have two main aims for this meeting:
+
+- Hackathon analyses on our three case studies to identify hurdles, limitations and methods development strategies to move forward in the field of multi omics single cell
+
+- Draft of a white paper about the challenges highlighted during the hackathon, discuss pitfalls and guidelines to develop computational methods in this fast changing area.
+
+We are currently working on an outline for the white paper, and we will ask your input on a shared document. This outline will also help focusing on particular aspects of the analyses. 
+
+*Secure the date (June 15-19), and accept the BIRS invitation online*. We are currently working on an agenda that will accommodate the different time zones, and still make it an engaging meeting where we can brainstorm together, initiate new collaborations and discuss  exciting avenues for further development.
 The workshop will be divided into keynote speaker sessions, participants presentations, brainstorming and panel discussions on pitfalls and guidelines to develop computational methods in this fast changing area. A white paper will be written with all participants, and there are opportunities to also submit study-specific papers. Whilst we are unable to fund travel to Banff, BIRS waives the fee registrations, covers food and accommodation for 42 participants and speakers invited to the event. 
 
 # Organisers
@@ -9,8 +18,6 @@ The workshop will be divided into keynote speaker sessions, participants present
 - [Elana Fertig](https://fertiglab.com/) (John Hopkins)
 - [Kim-Anh Lê Cao](https://lecao-lab.science.unimelb.edu.au/) (University of Melbourne)
 
-# Abstract submission due March 9
-We do prefer that trainees have a first go at the analysis of one of the hackathon study as this is the main aim of this workshop. The form to submit an abstract is [here](https://docs.google.com/forms/d/e/1FAIpQLSc1sI2WDo9eEUnVPIzuX7bMR95hoSf_wrZUdIRMshkUhcElpA/viewform)
 
 # Multi-omics studies
 *We provide easy access to our three multi-omics studies at the following links*.
@@ -36,7 +43,7 @@ All communication will be via Slack. Join our channel at birsbiointegration.slac
 
 # Timelines
 - Studies start to be released from the week of **14th October 2019**.
-- Abstract due on **March 9 2020** (more details to come on the format - we expect preliminary analyses to be presented) 
-- Abstract selection announced **March 16 2020** 
+- Abstract due on March 9 2020 (more details to come on the format - we expect preliminary analyses to be presented) 
+- Abstract selection announced March 16 2020 
 - Reproducible analyses shared on our GitHub on **June 1st 2020**
 
