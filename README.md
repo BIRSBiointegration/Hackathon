@@ -1,4 +1,4 @@
-Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14- 19, 2020 in Banff, Canada**. More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
+Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14-19, 2020 in Banff, Canada**. More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
 Due to covid-19, the event will go *virtual*. We have two main aims for this meeting:
 
@@ -32,11 +32,16 @@ Two targeted proteomic studies investigating the tumor-immune microenvironment i
 # Communication
 All communication will be via Slack. Join our channel at birsbiointegration.slack.com at this [link](https://join.slack.com/t/birsbiointegration/shared_invite/enQtODQxNzA5OTUzMzYzLTVmNDEzNDIyMTM2MDFmYzZlM2ViMGU0NWQzYjY2ODM4OGVlYjJiOGVmNWUzYmQxYTQ1Zjc1ZTE0YmEzNDYwYWI) 
 
-## Webinar
+## Information Webinar
 
 * Slides now available via [this link](https://docs.google.com/presentation/d/1tcJem9mgDHW0qP9iSWjWYScZrSsjXRRykqsiQ8eeAwA/edit#slide=id.g6b7ca50076_1_8).
 
 * The recording available via [this link](https://vimeo.com/376936827).
+
+
+## BIRS workshop
+
+* The recordings are available via [this link](http://www.birs.ca/videos/2020)
 
 
 # Timelines
