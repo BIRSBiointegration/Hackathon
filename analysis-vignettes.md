@@ -6,6 +6,7 @@
 |Contributor|[Title](source repo link)|[Report type](web link)|Additional info|
 |----|-----------------|-----------|-----------|
 |Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles/index.html)| |
+|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/Wancen/CV-MOFA)|[Vigntte](https://github.com/Wancen/CV-MOFA/blob/master/mofa_scnmt.html)| |
 
 ----------
 
