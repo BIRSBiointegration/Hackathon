@@ -6,6 +6,7 @@
 |Contributor|[Title](source repo link)|[Report type](web link)|Additional info|
 |----|-----------------|-----------|-----------|
 |Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles/index.html)| |
+|Josh Welch|[LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|[Vignette](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/index.html)| |
 
 ----------
 
