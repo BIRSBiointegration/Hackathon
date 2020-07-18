@@ -13,6 +13,7 @@
 
 |Contributor|[Title](source repo link)|[Report type](web link)|Additional info|
 |----|-----------------|-----------|-----------|
+|Lauren Hsu|[Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|[Vignette](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory/articles/index.html)| |
 
 ----------
 
