@@ -4,7 +4,7 @@
 
 ### scNMTseq
 
-|Contributor|[Title](source repo link)|[Report type](web link)|[Docker](web link)|Additional info|
+|Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
 |----|-----------------|-----------|-----------|-----------|
 |Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles/index.html)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)| |
 |Wancen Mu and Michael Love|[CV-MOFA](https://github.com/ajabadi/BIRSBIO2020.Benchmarking.CVmofa)|[Vigntte](https://ajabadi.github.io/BIRSBIO2020.Benchmarking.CVmofa)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
@@ -15,7 +15,7 @@
 
 ### scProteomics
 
-|Contributor|[Title](source repo link)|[Report type](web link)|[Docker](web link)|Additional info|
+|Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
 |----|-----------------|-----------|-----------|-----------|
 |Lauren Hsu|[Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|[Vignette](https://laurenhsu1.github.io/BIRSBIO2020.scProteomics.exploratory/)|[Docker](https://hub.docker.com/repository/docker/laurenhsu/birsbio2020_scproteomics_exploratory) | |
 
@@ -23,7 +23,7 @@
 
 ### scSpatial
 
-|Contributor|[Title](source repo link)|[Report type](web link)|[Docker](web link)|Additional info|
+|Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
 |----|-----------------|-----------|-----------|-----------|
 |Alexis Coullomb|[Neighbours Aggregtion](https://github.com/AlexCoul/BIRSBIO2020.seqFISH.neighbors_aggregation)|[Vignette](https://alexcoul.github.io/BIRSBIO2020.seqFISH.neighbors_aggregation/spatial%20analysis/transcriptomics/2020/07/15/BIRS_Biointegration-seqFISH_challenge-neighbors_aggregation.html)|
 |Joshua Sodicoff|[Utilizing LIGER for the integration of spatial transcriptomic data](https://github.com/jsodicoff/BIRSBIO2020.seqFISH.LIGERintegration)|[Coming soon]()|[Docker](https://hub.docker.com/r/sodicoff/birsbio2020.seqfish.liger_int)|
