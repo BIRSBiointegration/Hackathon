@@ -4,12 +4,12 @@
 
 ### scNMTseq
 
-|Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
-|----|-----------------|-----------|-----------|-----------|
-|Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)| |
-|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/ajabadi/BIRSBIO2020.Benchmarking.CVmofa)|[Vignette](https://ajabadi.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
-|Josh Welch|[LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|[Vignette](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/articles)| |
-|Arshi Arora|[MOSAIC analysis of scNMT-seq](https://github.com/arorarshi/BIRSBIO2020.scNMTseq.MOSAIC)|[Vignette](https://arorarshi.github.io/BIRSBIO2020.scNMTseq.MOSAIC/articles)|[Docker](https://hub.docker.com/repository/docker/arorarshi/birs_bio_2020-scnmtseq-mosaic)| |
+|Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
+|----|----|-----------------|-----------|-----------|-----------|
+|Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|R|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)| |
+|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/ajabadi/BIRSBIO2020.Benchmarking.CVmofa)|R|[Vignette](https://ajabadi.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
+|Josh Welch|[LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|R|[Vignette](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/articles)| |
+|Arshi Arora|[MOSAIC analysis of scNMT-seq](https://github.com/arorarshi/BIRSBIO2020.scNMTseq.MOSAIC)|R|[Vignette](https://arorarshi.github.io/BIRSBIO2020.scNMTseq.MOSAIC/articles)|[Docker](https://hub.docker.com/repository/docker/arorarshi/birs_bio_2020-scnmtseq-mosaic)| |
 
 ----------
 
@@ -18,7 +18,7 @@
 |Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
 |----|-----------------|-----------|-----------|-----------|
 |Lauren Hsu|[Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|[Vignette](https://laurenhsu1.github.io/BIRSBIO2020.scProteomics.exploratory/articles)|[Docker](https://hub.docker.com/repository/docker/laurenhsu/birsbio2020_scproteomics_exploratory) | |
-|Chen Meng|[partially overlapping data](https://github.com/mengchen18/BIRSBioIntegrationWorkshop)|[Vignette](https://github.com/mengchen18/BIRSBioIntegrationWorkshop)|[Docker] | |
+|Chen Meng|[partially overlapping data](https://github.com/mengchen18/BIRSBIO2020.scProteomics.predictPartialOverlappingData)|[Vignette](https://mengchen18.github.io/BIRSBIO2020.scProteomics.predictPartialOverlappingData/articles/predictPartialOverlapData.html)|[Docker] | |
 
 
 
@@ -26,13 +26,13 @@
 
 ### scSpatial
 
-|Contributor|[Title](source repo link)|[Report type](web link)|[Container](web link)|Additional info|
-|----|-----------------|-----------|-----------|-----------|
-|Alexis Coullomb|[Neighbours Aggregtion](https://github.com/AlexCoul/BIRSBIO2020.seqFISH.neighbors_aggregation)|[Vignette](https://alexcoul.github.io/BIRSBIO2020.seqFISH.neighbors_aggregation/spatial%20analysis/transcriptomics/2020/07/15/BIRS_Biointegration-seqFISH_challenge-neighbors_aggregation.html)|
-|Joshua Sodicoff|[Utilizing LIGER for the integration of spatial transcriptomic data](https://github.com/jsodicoff/BIRSBIO2020.seqFISH.LIGERintegration)|[Vignette](https://jsodicoff.github.io/BIRSBIO2020.seqFISH.LIGERintegration/articles)|[Docker](https://hub.docker.com/r/sodicoff/birsbio2020.seqfish.liger_int)|
-|Dario Righelli|[SpatialExperiment Analysis](https://github.com/drighelli/BIRSBIO2020.seqFISH.SpatialAnalysis)|[Vignette](https://drighelli.github.io/BIRSBIO2020.seqFISH.SpatialAnalysis/articles)|[Docker](https://hub.docker.com/r/drighelli/birsbio2020_seqfish_spatialanalysis)|
-|Amrit Singh|[seqFISH+scRNASeq integration using semi-supervised glmnet](https://github.com/singha53/BIRSBIO2020.seqFISH.SSEnet)|[Vignette](https://singha53.github.io/BIRSBIO2020.seqFISH.SSEnet/articles)|[Docker](https://hub.docker.com/repository/docker/singha53/birsbio2020_seqfish_ssenet)|
-|Hang Xu|[Cortex seq-FISH + scRNA data - gene selection](https://github.com/gooday23/BIRSBIO2020.seqFISHChallenge.geneSeletction)|[Vignette](https://gooday23.github.io/BIRSBIO2020.seqFISHChallenge.geneSeletction/seqfish/scrna/2020/07/20/BIRS_Biointegration-seqFish_challenge-geneselection.html)|
+|Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
+|----|----|-----------------|-----------|-----------|-----------|
+|Alexis Coullomb|[Neighbours Aggregtion](https://github.com/AlexCoul/BIRSBIO2020.seqFISH.neighbors_aggregation)|Python|[Vignette](https://alexcoul.github.io/BIRSBIO2020.seqFISH.neighbors_aggregation/spatial%20analysis/transcriptomics/2020/07/15/BIRS_Biointegration-seqFISH_challenge-neighbors_aggregation.html)|
+|Joshua Sodicoff|[Utilizing LIGER for the integration of spatial transcriptomic data](https://github.com/jsodicoff/BIRSBIO2020.seqFISH.LIGERintegration)|R|[Vignette](https://jsodicoff.github.io/BIRSBIO2020.seqFISH.LIGERintegration/articles)|[Docker](https://hub.docker.com/r/sodicoff/birsbio2020.seqfish.liger_int)|
+|Dario Righelli|[SpatialExperiment Analysis](https://github.com/drighelli/BIRSBIO2020.seqFISH.SpatialAnalysis)|R|[Vignette](https://drighelli.github.io/BIRSBIO2020.seqFISH.SpatialAnalysis/articles)|[Docker](https://hub.docker.com/r/drighelli/birsbio2020_seqfish_spatialanalysis)|
+|Amrit Singh|[seqFISH+scRNASeq integration using semi-supervised glmnet](https://github.com/singha53/BIRSBIO2020.seqFISH.SSEnet)|R|[Vignette](https://singha53.github.io/BIRSBIO2020.seqFISH.SSEnet/articles)|[Docker](https://hub.docker.com/repository/docker/singha53/birsbio2020_seqfish_ssenet)|
+|Hang Xu|[Cortex seq-FISH + scRNA data - gene selection](https://github.com/gooday23/BIRSBIO2020.seqFISHChallenge.geneSeletction)|Python|[Vignette](https://gooday23.github.io/BIRSBIO2020.seqFISHChallenge.geneSeletction/seqfish/scrna/2020/07/20/BIRS_Biointegration-seqFish_challenge-geneselection.html)|
 
 
 
@@ -57,4 +57,3 @@
 :four: Add the relevant links and details to the table above through a pull request
 
 :five: Please update these steps through a PR if required
-
