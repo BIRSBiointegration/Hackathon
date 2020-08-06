@@ -19,8 +19,7 @@
 |----|----|-----------------|-----------|-----------|-----------|
 |Lauren Hsu|[Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|R|[Vignette](https://laurenhsu1.github.io/BIRSBIO2020.scProteomics.exploratory/articles)|[Docker](https://hub.docker.com/repository/docker/laurenhsu/birsbio2020_scproteomics_exploratory) | |
 |Chen Meng|[Predicting partially overlapping data](https://github.com/mengchen18/BIRSBIO2020.scProteomics.predictPartialOverlappingData)|R|[Vignette](https://mengchen18.github.io/BIRSBIO2020.scProteomics.predictPartialOverlappingData/articles/predictPartialOverlapData.html)| | |
-
-
+|Pratheepa  Jeganathan|[Latent Dirichlet Allocation](https://github.com/PratheepaJ/BIRSBIO2020scProteomicsLDA)|R|[Vignette](https://pratheepaj.github.io/BIRSBIO2020scProteomicsLDA/articles)|| |
 
 ----------
 
