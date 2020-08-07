@@ -73,6 +73,31 @@ Features:
  assays() - convert ExperimentList to a SimpleList of matrices
 ```
 
+#### ./output/scnmtseq_gastrulation_mae_AllCells.rds
+
+The updated `MultiAssayExperiment` object with all cells and QC metric included. The rna data are constained in a `SingleCellExperiment` object. The CTCF and P300 data are excluded (see the processing step [here](https://github.com/rargelaguet/scnmt_gastrulation/blob/develop/metaccrna/create_MultiAssayExperiment.Rmd)):
+
+```r
+A MultiAssayExperiment object of 9 listed
+ experiments with user-defined names and respective classes.
+ Containing an ExperimentList class object of length 9:
+ [1] rna: SingleCellExperiment with 18345 rows and 2480 columns
+ [2] met_genebody: matrix with 17559 rows and 986 columns
+ [3] met_promoter: matrix with 17179 rows and 986 columns
+ [4] met_cgi: matrix with 14080 rows and 986 columns
+ [5] met_DHS: matrix with 6673 rows and 986 columns
+ [6] acc_genebody: matrix with 17924 rows and 1105 columns
+ [7] acc_promoter: matrix with 18037 rows and 1103 columns
+ [8] acc_cgi: matrix with 14824 rows and 1101 columns
+ [9] acc_DHS: matrix with 20082 rows and 1094 columns
+Features:
+ experiments() - obtain the ExperimentList instance
+ colData() - the primary/phenotype DFrame
+ sampleMap() - the sample availability DFrame
+ `$`, `[`, `[[` - extract colData columns, subset, or experiment
+ *Format() - convert into a long or wide DFrame
+ assays() - convert ExperimentList to a SimpleList of matrices
+```
 
 #### ./output/met_dt_list.rds
 
