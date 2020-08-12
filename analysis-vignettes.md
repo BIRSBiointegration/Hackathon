@@ -7,7 +7,7 @@
 |Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
 |----|----|-----------------|-----------|-----------|-----------|
 |Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|R|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)| |
-|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/ajabadi/BIRSBIO2020.Benchmarking.CVmofa)|R|[Vignette](https://ajabadi.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
+|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/mikelove/BIRSBIO2020.Benchmarking.CVmofa)|R|[Vignette](https://mikelove.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles/MOFA-scNMTseq.html)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
 |Josh Welch|[LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|R|[Vignette](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/articles)| |
 |Arshi Arora|[MOSAIC analysis of scNMT-seq](https://github.com/arorarshi/BIRSBIO2020.scNMTseq.MOSAIC)|R|[Vignette](https://arorarshi.github.io/BIRSBIO2020.scNMTseq.MOSAIC/articles)|[Docker](https://hub.docker.com/repository/docker/arorarshi/birs_bio_2020-scnmtseq-mosaic)| |
 
