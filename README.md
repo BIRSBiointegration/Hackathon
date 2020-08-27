@@ -1,3 +1,6 @@
+**Submitted challenge analyses, vignettes, and containers now available at https://github.com/BIRSBiointegration/Hackathon/blob/master/analysis-vignettes.md**
+
+
 Welcome to our repository to prepare for our upcoming workshop *Mathematical Frameworks for Integrative Analysis of Emerging Biological Data Type* **June 14-19, 2020 in Banff, Canada**. More details about the workshop can be found in [here](https://www.birs.ca/events/2020/5-day-workshops/20w5197) from the BIRS event page.
 
 Due to covid-19, the event will go *virtual*. We have two main aims for this meeting:
