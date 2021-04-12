@@ -16,7 +16,7 @@ Tasic *et al* 2016, reference paper for scRNAseq is available at: (https://www.n
 
 ## Overview
 
-The dataset includes 1,597 single cells from adult mouse visual cortex and 125 genes mapped with seqFISH from Zhu *et al* 2018 and scRNA-seq data for ~1,600 cells from Tasic *et al* 2016 in the primary visual cortex in adult male mice. These combined data enable cell type mapping with spatial information in the adult mouse visual cortex.  
+The dataset includes 1,597 single cells from adult mouse visual cortex and 125 genes mapped with seqFISH from Zhu *et al* 2018 and scRNA-seq data for 1,723 cells from Tasic *et al* 2016 in the primary visual cortex in adult male mice. These combined data enable cell type mapping with spatial information in the adult mouse visual cortex.  
 
 ### Main challenge: 
 
