@@ -33,6 +33,7 @@
 |Dario Righelli|[SpatialExperiment Analysis](https://github.com/drighelli/BIRSBIO2020.seqFISH.SpatialAnalysis)|R|[Vignette](https://drighelli.github.io/BIRSBIO2020.seqFISH.SpatialAnalysis/articles)|[Docker](https://hub.docker.com/r/drighelli/birsbio2020_seqfish_spatialanalysis)|
 |Amrit Singh|[seqFISH+scRNASeq integration using semi-supervised glmnet](https://github.com/singha53/BIRSBIO2020.seqFISH.SSEnet)|R|[Vignette](https://singha53.github.io/BIRSBIO2020.seqFISH.SSEnet/articles)|[Docker](https://hub.docker.com/repository/docker/singha53/birsbio2020_seqfish_ssenet)|
 |Hang Xu|[Cortex seq-FISH + scRNA data - gene selection](https://github.com/gooday23/BIRSBIO2020.seqFISHChallenge.geneSeletction)|Python|[Vignette](https://gooday23.github.io/BIRSBIO2020.seqFISHChallenge.geneSeletction/seqfish/scrna/2020/07/20/BIRS_Biointegration-seqFish_challenge-geneselection.html)|
+|Yuzhou Feng|[sPLS-DA and MINT models for cell type prediction and gene selection](https://github.com/fuerzhou/BIRSBIO2020.scSpatial.sPLSDA_MINT)|R|[Vignette](https://fuerzhou.github.io/BIRSBIO2020.scSpatial.sPLSDA_MINT/articles)|[docker](https://hub.docker.com/r/fuerzhou/spatial_splsda_mint)|
 
 
 
