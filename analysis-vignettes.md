@@ -2,39 +2,23 @@
 
 ## Contributions
 
-### scNMTseq
 
-|Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
-|----|----|-----------------|-----------|-----------|-----------|
-|Al JalalAbadi|[PLS](https://github.com/ajabadi/BIRSBIO2020.scNMTseq.PLS)|R|[Vignette](https://ajabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)| |
-|Wancen Mu and Michael Love|[CV-MOFA](https://github.com/mikelove/BIRSBIO2020.Benchmarking.CVmofa)|R|[Vignette](https://mikelove.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles/MOFA-scNMTseq.html)|[Docker](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)| |
-|Josh Welch|[LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|R|[Vignette](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/articles/scNMT_liger.html)|[Docker](https://hub.docker.com/r/joshuawd/birsbio2020_scnmtseq_liger)| |
-|Arshi Arora|[MOSAIC analysis of scNMT-seq](https://github.com/arorarshi/BIRSBIO2020.scNMTseq.MOSAIC)|R|[Vignette](https://arorarshi.github.io/BIRSBIO2020.scNMTseq.MOSAIC/articles)|[Docker](https://hub.docker.com/repository/docker/arorarshi/birs_bio_2020-scnmtseq-mosaic)| |
-
-----------
-
-### scProteomics
-
-|Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
-|----|----|-----------------|-----------|-----------|-----------|
-|Lauren Hsu|[Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|R|[Vignette](https://laurenhsu1.github.io/BIRSBIO2020.scProteomics.exploratory/articles)|[Docker](https://hub.docker.com/repository/docker/laurenhsu/birsbio2020_scproteomics_exploratory) | |
-|Chen Meng|[Predicting partially overlapping data](https://github.com/mengchen18/BIRSBIO2020.scProteomics.predictPartialOverlappingData)|R|[Vignette](https://mengchen18.github.io/BIRSBIO2020.scProteomics.predictPartialOverlappingData/articles/predictPartialOverlapData.html)| | |
-|Pratheepa  Jeganathan|[Latent Dirichlet Allocation](https://github.com/PratheepaJ/BIRSBIO2020scProteomicsLDA)|R|[Vignette](https://pratheepaj.github.io/BIRSBIO2020scProteomicsLDA/articles)|| |
-|Yingxin Lin|[Integrative analysis of breast cancer survival based on spatial features](https://github.com/YingxinLin/BIRSBIO2020.scProteomics.survival)|R|[Vignette](https://yingxinlin.github.io/BIRSBIO2020.scProteomics.survival/index.html)|[Docker](https://hub.docker.com/repository/docker/yingxinlin/scproteomics) | |
-
-----------
-
-### scSpatial
-
-|Contributor|[Title](source repo link)|Language|[Report type](web link)|[Container](web link)|Additional info|
-|----|----|-----------------|-----------|-----------|-----------|
-|Alexis Coullomb|[Neighbours Aggregtion](https://github.com/AlexCoul/BIRSBIO2020.seqFISH.neighbors_aggregation)|Python|[Vignette](https://alexcoul.github.io/BIRSBIO2020.seqFISH.neighbors_aggregation/spatial%20analysis/transcriptomics/2020/07/15/BIRS_Biointegration-seqFISH_challenge-neighbors_aggregation.html)|
-|Joshua Sodicoff|[Utilizing LIGER for the integration of spatial transcriptomic data](https://github.com/jsodicoff/BIRSBIO2020.seqFISH.LIGERintegration)|R|[Vignette](https://jsodicoff.github.io/BIRSBIO2020.seqFISH.LIGERintegration/articles)|[Docker](https://hub.docker.com/r/sodicoff/birsbio2020.seqfish.liger_int)|
-|Dario Righelli|[SpatialExperiment Analysis](https://github.com/drighelli/BIRSBIO2020.seqFISH.SpatialAnalysis)|R|[Vignette](https://drighelli.github.io/BIRSBIO2020.seqFISH.SpatialAnalysis/articles)|[Docker](https://hub.docker.com/r/drighelli/birsbio2020_seqfish_spatialanalysis)|
-|Amrit Singh|[seqFISH+scRNASeq integration using semi-supervised glmnet](https://github.com/singha53/BIRSBIO2020.seqFISH.SSEnet)|R|[Vignette](https://singha53.github.io/BIRSBIO2020.seqFISH.SSEnet/articles)|[Docker](https://hub.docker.com/repository/docker/singha53/birsbio2020_seqfish_ssenet)|
-|Hang Xu|[Cortex seq-FISH + scRNA data - gene selection](https://github.com/gooday23/BIRSBIO2020.seqFISHChallenge.geneSeletction)|Python|[Vignette](https://gooday23.github.io/BIRSBIO2020.seqFISHChallenge.geneSeletction/seqfish/scrna/2020/07/20/BIRS_Biointegration-seqFish_challenge-geneselection.html)|
-|Yuzhou Feng|[sPLS-DA and MINT models for cell type prediction and gene selection](https://github.com/fuerzhou/BIRSBIO2020.scSpatial.sPLSDA_MINT)|R|[Vignette](https://fuerzhou.github.io/BIRSBIO2020.scSpatial.sPLSDA_MINT/articles)|[docker](https://hub.docker.com/r/fuerzhou/spatial_splsda_mint)|
-
+|Hackathon|Participant(s)|Title|Language|Vignette|Additional info|
+|--------|--------------|-----------|-------|-------|-------|
+|scNMTseq|Al J Abadi|[![](images/logo-github.png) Multi-block PLS](https://github.com/aljabadi/BIRSBIO2020.scNMTseq.PLS)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://aljabadi.github.io/BIRSBIO2020.scNMTseq.PLS/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-scnmtseq-pls)|
+|scNMTseq|Wancen Mu and Michael Love|[![](images/logo-github.png) CV-MOFA](https://github.com/mikelove/BIRSBIO2020.Benchmarking.CVmofa)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://mikelove.github.io/BIRSBIO2020.Benchmarking.CVmofa/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/repository/docker/aljabadi/birs_bio_2020-benchmarking-cv_mofa)|
+|scNMTseq|Josh Welch|[![](images/logo-github.png) LIGER analysis of scNMT-seq](https://github.com/jw156605/BIRSBIO2020.scNMTseq.LIGER)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://jw156605.github.io/BIRSBIO2020.scNMTseq.LIGER/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/r/joshuawd/birsbio2020_scnmtseq_liger)|
+|scNMTseq|Arshi Arora|[![](images/logo-github.png) MOSAIC analysis of scNMT-seq](https://github.com/arorarshi/BIRSBIO2020.scNMTseq.MOSAIC)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://arorarshi.github.io/BIRSBIO2020.scNMTseq.MOSAIC/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/repository/docker/arorarshi/birs_bio_2020-scnmtseq-mosaic)|
+|scProteomics|Lauren Hsu|[![](images/logo-github.png) Exploratory analyses](https://github.com/laurenhsu1/BIRSBIO2020.scProteomics.exploratory)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://laurenhsu1.github.io/BIRSBIO2020.scProteomics.exploratory/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/repository/docker/laurenhsu/birsbio2020_scproteomics_exploratory)|
+|scProteomics|Chen Meng|[![](images/logo-github.png) Predicting partially overlapping data](https://github.com/mengchen18/BIRSBIO2020.scProteomics.predictPartialOverlappingData)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://mengchen18.github.io/BIRSBIO2020.scProteomics.predictPartialOverlappingData/articles/)|
+|scProteomics|Pratheepa Jeganathan|[![](images/logo-github.png) Latent Dirichlet Allocation](https://github.com/PratheepaJ/BIRSBIO2020scProteomicsLDA)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://pratheepaj.github.io/BIRSBIO2020scProteomicsLDA/articles/)|
+|scProteomics|Yingxin Lin|[![](images/logo-github.png) Integrative analysis of breast cancer survival based on spatial features](https://github.com/YingxinLin/BIRSBIO2020.scProteomics.survival)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://yingxinlin.github.io/BIRSBIO2020.scProteomics.survival/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/repository/docker/yingxinlin/scproteomics)|
+|scSpatial|Alexis Coullomb|[![](images/logo-github.png) Neighbours Aggregtion](https://github.com/AlexCoul/BIRSBIO2020.seqFISH.neighbors_aggregation)|![](images/logo-python.png)|[![](images/icon-vignette.png)](https://alexcoul.github.io/BIRSBIO2020.seqFISH.neighbors_aggregation/spatial%20analysis/transcriptomics/2020/07/15/BIRS_Biointegration-seqFISH_challenge-neighbors_aggregation.html)|
+|scSpatial|Joshua Sodicoff|[![](images/logo-github.png) Utilizing LIGER for the integration of spatial transcriptomic data](https://github.com/jsodicoff/BIRSBIO2020.seqFISH.LIGERintegration)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://jsodicoff.github.io/BIRSBIO2020.seqFISH.LIGERintegration/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/r/sodicoff/birsbio2020.seqfish.liger_int)|
+|scSpatial|Dario Righelli|[![](images/logo-github.png) SpatialExperiment Analysis](https://github.com/drighelli/BIRSBIO2020.seqFISH.SpatialAnalysis)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://drighelli.github.io/BIRSBIO2020.seqFISH.SpatialAnalysis/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/r/drighelli/birsbio2020_seqfish_spatialanalysis)|
+|scSpatial|Amrit Singh|[![](images/logo-github.png) seqFISH+scRNASeq integration using semi-supervised glmnet](https://github.com/singha53/BIRSBIO2020.seqFISH.SSEnet)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://singha53.github.io/BIRSBIO2020.seqFISH.SSEnet/articles/)|
+|scSpatial|Hang Xu|[![](images/logo-github.png) Cortex seq-FISH + scRNA data - gene selection](https://github.com/gooday23/BIRSBIO2020.seqFISHChallenge.geneSeletction)|![](images/logo-python.png)|[![](images/icon-vignette.png)](https://gooday23.github.io/BIRSBIO2020.seqFISHChallenge.geneSeletction/seqfish/scrna/2020/07/20/BIRS_Biointegration-seqFish_challenge-geneselection.html)|
+|scSpatial|Yuzhou Feng|[![](images/logo-github.png) sPLS-DA and MINT models for cell type prediction and gene selection](https://github.com/fuerzhou/BIRSBIO2020.scSpatial.sPLSDA_MINT)|![](images/logo-R.png)|[![](images/icon-vignette.png)](https://fuerzhou.github.io/BIRSBIO2020.scSpatial.sPLSDA_MINT/articles/)|[![](images/logo-docker.png)](https://hub.docker.com/r/fuerzhou/spatial_splsda_mint) |
 
 
 ## How to deploy your own html and containerized report using GitHub Actions
