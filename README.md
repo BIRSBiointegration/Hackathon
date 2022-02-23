@@ -9,7 +9,7 @@ Due to covid-19, the event will go *virtual*. We have two main aims for this mee
 
 - **Draft of a white paper about the challenges highlighted during the hackathon**, discuss pitfalls and guidelines to develop computational methods in this fast changing area.
 
-We are currently working on an outline for the white paper, and we will ask your input on a shared document. This outline will also help focusing on particular aspects of the analyses. 
+A publication of the white paper sumarizing the outcomes of this meeting is available as [Le Cao et al, Genome Biology, 2021](https://doi.org/10.1186/s13059-021-02433-9). Please cite this manuscript for use of these summarized datasets provided in this repository.
 
 *Secure the date (June 15-19), and accept the BIRS invitation online*. We are currently working on an agenda that will accommodate the different time zones, and still make it an engaging meeting where we can brainstorm together, initiate new collaborations and discuss  exciting avenues for further development.
 The workshop will be divided into keynote speaker sessions, participants presentations, brainstorming and panel discussions on pitfalls and guidelines to develop computational methods in this fast changing area. A white paper will be written with all participants, and there are opportunities to also submit study-specific papers. Whilst we are unable to fund travel to Banff, BIRS waives the fee registrations, covers food and accommodation for 42 participants and speakers invited to the event. 
