@@ -34,7 +34,7 @@ The orginal scRNAseq count matrix can be downloaded from [GEO](https://www.ncbi.
 
 ## Easy data 
 
-Easy data link to find files for this project: (https://www.dropbox.com/sh/avj4nrd4la5i88u/AACafWwBbE-xsLvOGDwRZDpYa?dl=0)
+Easy data link to find files for this project: (https://bioconductor.org/packages/release/data/experiment/vignettes/SingleCellMultiModal/inst/doc/seqFISH.html)
 
 ## Data directories
 
